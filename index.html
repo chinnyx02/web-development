@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Dynamic Fashion/ 13 04 2016 03:42:43 GMT -->
 <head>
 <meta charset="utf-8">
-<title>Dynamic Fashion world</title>
+<title>Dynamic Fashion World - Premium Clothing & Accessories</title>
 <!-- Stylesheets -->
 <link href="css/bootstrap.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet">
 <link href="css/responsive.css" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
 <link rel="icon" href="images/favicon.png" type="image/x-icon">
@@ -16,8 +17,110 @@
 <!-- Responsive -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-<!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
-<!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
+
+<style>
+/* Additional CSS for professional logo positioning */
+.header-upper .auto-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.header-upper .logo-outer {
+    flex: 0 0 auto;
+    position: relative;
+    z-index: 10;
+}
+
+.header-upper .logo {
+    padding: 15px 0;
+    transition: all 0.3s ease;
+}
+
+.header-upper .logo svg {
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.header-upper .nav-outer {
+    flex: 0 0 auto;
+}
+
+.main-menu .navigation {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.main-menu .navigation > li {
+    list-style: none;
+    margin-left: 30px;
+}
+
+.main-menu .navigation > li > a {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    padding: 10px 0;
+    display: block;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.main-menu .navigation > li > a:hover,
+.main-menu .navigation > li.current > a {
+    color: #FF3366;
+}
+
+/* Mobile Navigation */
+.mobile-nav-toggler {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 10px;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .main-menu .navigation {
+        display: none;
+    }
+    
+    .mobile-nav-toggler {
+        display: block;
+    }
+    
+    .header-upper .auto-container {
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-upper .logo svg {
+        width: 250px;
+        height: auto;
+    }
+}
+
+@media (max-width: 576px) {
+    .header-upper .logo svg {
+        width: 200px;
+    }
+}
+
+/* Logo hover effect */
+.logo:hover svg {
+    opacity: 0.95;
+    transform: scale(1.02);
+}
+
+/* Smooth transitions */
+* {
+    transition: all 0.3s ease;
+}
+</style>
+
 </head>
 
 <body>
@@ -32,14 +135,12 @@
             <div class="auto-container clearfix">
                 <div class="top-left clearfix">
                     <div class="text"><span class="icon flaticon-call-answer"></span> Need help? Call Us Now : <a href="tel:0703-332-8869" class="number">0703 332 8869</a></div>
-					
                 </div>
                 <div class="top-right clearfix">
                     <!-- Info List -->
-					<ul class="info-list">
+                    <ul class="info-list">
                         <li><a href="about.html">Our Story</a></li>
                         <li><a href="blog.html">Inspiration</a></li>
-				
                     </ul>
                 </div>
             </div>
@@ -48,122 +149,108 @@
 
         <!-- Header Upper -->
         <div class="header-upper">
-            <div class="inner-container">
-                <div class="auto-container clearfix" style="text-align: center; align-items: center">
-                    <!--Info-->
-                    <div class="logo-outer">
-                        <a href="index.html" ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" width="400" height="120">
-  <defs>
-    <linearGradient id="fashionGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#FF3366;stop-opacity:1" />
-      <stop offset="50%" style="stop-color:#FF6B35;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#FFD700;stop-opacity:1" />
-    </linearGradient>
-    <linearGradient id="globalGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#FF3366;stop-opacity:0.8" />
-      <stop offset="100%" style="stop-color:#FF6B35;stop-opacity:0.8" />
-    </linearGradient>
-  </defs>
+            <div class="auto-container clearfix">
+                <!-- Logo Area -->
+                <div class="logo-outer">
+                    <div class="logo">
+                        <a href="index.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" width="320" height="96">
+                                <defs>
+                                    <linearGradient id="fashionGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#FF3366;stop-opacity:1" />
+                                        <stop offset="50%" style="stop-color:#FF6B35;stop-opacity:1" />
+                                        <stop offset="100%" style="stop-color:#FFD700;stop-opacity:1" />
+                                    </linearGradient>
+                                    <linearGradient id="globalGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#FF3366;stop-opacity:0.8" />
+                                        <stop offset="100%" style="stop-color:#FF6B35;stop-opacity:0.8" />
+                                    </linearGradient>
+                                </defs>
 
-  <!-- Dress/Hanger Icon -->
-  <g transform="translate(60, 35)">
-    <!-- Hanger hook -->
-    <path d="M 40 0 Q 40 -15 30 -15 Q 20 -15 20 0 L 20 10" 
-          stroke="url(#fashionGradient)" stroke-width="3" fill="none" stroke-linecap="round"/>
-    
-    <!-- Hanger body -->
-    <path d="M 10 10 L 70 10 Q 75 10 75 15 L 60 45 Q 55 50 50 50 L 30 50 Q 25 50 20 45 L 5 15 Q 0 10 10 10 Z" 
-          stroke="url(#fashionGradient)" stroke-width="2.5" fill="none"/>
-    
-    <!-- Dress shape -->
-    <path d="M 25 45 L 35 25 L 40 30 L 45 25 L 55 45" 
-          stroke="url(#fashionGradient)" stroke-width="2" fill="none"/>
-  </g>
+                                <!-- Dress/Hanger Icon -->
+                                <g transform="translate(50, 28)">
+                                    <!-- Hanger hook -->
+                                    <path d="M 35 0 Q 35 -12 26 -12 Q 17 -12 17 0 L 17 8" 
+                                          stroke="url(#fashionGradient)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                                    
+                                    <!-- Hanger body -->
+                                    <path d="M 8 8 L 62 8 Q 66 8 66 12 L 52 38 Q 48 42 43 42 L 27 42 Q 22 42 18 38 L 4 12 Q 0 8 8 8 Z" 
+                                          stroke="url(#fashionGradient)" stroke-width="2" fill="none"/>
+                                    
+                                    <!-- Dress shape -->
+                                    <path d="M 21 38 L 30 20 L 34 25 L 38 20 L 47 38" 
+                                          stroke="url(#fashionGradient)" stroke-width="1.8" fill="none"/>
+                                </g>
 
-  <!-- Globe/World element -->
-  <g transform="translate(120, 25)">
-    <circle cx="40" cy="40" r="30" stroke="url(#globalGradient)" stroke-width="2.5" fill="none"/>
-    <!-- Latitude lines -->
-    <ellipse cx="40" cy="40" rx="30" ry="10" stroke="url(#fashionGradient)" stroke-width="1.5" fill="none"/>
-    <ellipse cx="40" cy="40" rx="15" ry="30" stroke="url(#fashionGradient)" stroke-width="1.5" fill="none"/>
-    <!-- Small fashion icons on globe -->
-    <circle cx="30" cy="30" r="3" fill="#FF3366"/>
-    <circle cx="50" cy="35" r="2.5" fill="#FF6B35"/>
-    <circle cx="35" cy="50" r="2" fill="#FFD700"/>
-  </g>
+                                <!-- Globe/World element -->
+                                <g transform="translate(105, 20)">
+                                    <circle cx="35" cy="35" r="26" stroke="url(#globalGradient)" stroke-width="2" fill="none"/>
+                                    <ellipse cx="35" cy="35" rx="26" ry="8" stroke="url(#fashionGradient)" stroke-width="1.2" fill="none"/>
+                                    <ellipse cx="35" cy="35" rx="12" ry="26" stroke="url(#fashionGradient)" stroke-width="1.2" fill="none"/>
+                                    <circle cx="26" cy="26" r="2.5" fill="#FF3366"/>
+                                    <circle cx="44" cy="30" r="2" fill="#FF6B35"/>
+                                    <circle cx="30" cy="44" r="1.8" fill="#FFD700"/>
+                                </g>
 
-  <!-- Text -->
-  <text x="200" y="65" font-family="Arial, Helvetica, sans-serif" font-size="42" font-weight="bold" 
-        fill="url(#fashionGradient)" letter-spacing="3">
-    FASHION
-  </text>
-  <text x="210" y="92" font-family="Arial, Helvetica, sans-serif" font-size="18" 
-        fill="#666" letter-spacing="8" font-weight="300">
-    WORLD
-  </text>
-  
-  <!-- Tagline -->
-  <text x="200" y="108" font-family="Arial, Helvetica, sans-serif" font-size="10" 
-        fill="#999" letter-spacing="5" text-anchor="middle">
-    STYLE &amp; ELEGANCE
-  </text>
-</svg></a>
+                                <!-- Text -->
+                                <text x="175" y="58" font-family="'Playfair Display', Georgia, serif" font-size="36" font-weight="700" 
+                                      fill="url(#fashionGradient)" letter-spacing="3">
+                                    FASHION
+                                </text>
+                                <text x="183" y="82" font-family="Arial, sans-serif" font-size="15" 
+                                      fill="#888" letter-spacing="7" font-weight="400">
+                                    WORLD
+                                </text>
+                                <text x="175" y="96" font-family="Arial, sans-serif" font-size="8" 
+                                      fill="#AAA" letter-spacing="4" text-anchor="middle">
+                                    STYLE &amp; ELEGANCE
+                                </text>
+                            </svg>
+                        </a>
                     </div>
+                </div>
 
-                    <!--Nav Box-->
-                    <div class="nav-outer clearfix">
-                        <!--Mobile Navigation Toggler For Mobile--><div class="mobile-nav-toggler"><span class="icon flaticon-menu-1"></span></div>
-                        <nav class="main-menu navbar-expand-md navbar-light">
-                            <div class="navbar-header">
-                                <!-- Togg le Button -->      
-                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                                </button>
-                            </div>
-                            
-                            <div class="collapse navbar-collapse clearfix" id="navbarSupportedContent">
-                                <ul class="navigation clearfix">
-                                    <li class="current dropdown"><a href="index.html">Home</a>
-                                        
-                                    </li>
-									<li class="dropdown"><a href="about.html">About us</a>
-                                       									
-                                    <li class="dropdown"><a href="projects-classic.html">Projects</a>
-                                      
-							
-                                    </li>
-                                    <li><a href="contact.html">Contact</a></li>
-                                </ul>
-                            </div>
-                        </nav>
-                        <!-- Main Menu End-->
-						
-						<!-- Outer Box
-                        <div class="outer-box clearfix">
-                            <div class="search-box-btn"><span class="icon flaticon-magnifying-glass-1"></span></div>
-                        </div> -->
-                    </div>
+                <!--Nav Box-->
+                <div class="nav-outer clearfix">
+                    <!--Mobile Navigation Toggler-->
+                    <div class="mobile-nav-toggler"><span class="icon flaticon-menu-1"></span></div>
+                    <nav class="main-menu navbar-expand-md navbar-light">
+                        <div class="navbar-header">
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            </button>
+                        </div>
+                        
+                        <div class="collapse navbar-collapse clearfix" id="navbarSupportedContent">
+                            <ul class="navigation clearfix">
+                                <li class="current"><a href="index.html">Home</a></li>
+                                <li><a href="about.html">About us</a></li>
+                                <li><a href="projects-classic.html">Projects</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                    </nav>
                 </div>
             </div>
         </div>
         <!--End Header Upper-->
 
-    	<!-- Mobile Menu  -->
+        <!-- Mobile Menu -->
         <div class="mobile-menu">
             <div class="menu-backdrop"></div>
             <div class="close-btn"><span class="icon flaticon-cancel"></span></div>
             
             <nav class="menu-box">
-                <div class="nav-logo"><a href="index-2.html"><img src="images/logo.png" alt="" title=""></a></div>
+                <div class="nav-logo"><a href="index.html"><img src="images/logo.png" alt="" title=""></a></div>
                 <ul class="navigation clearfix"><!--Keep This Empty / Menu will come through Javascript--></ul>
-				<!--Social Links-->
-				<div class="social-links">
-					<ul class="clearfix">
-						<li><a href="#"><span class="fab fa-twitter"></span></a></li>
-						<li><a href="#"><span class="fab fa-facebook-square"></span></a></li>
-						<li><a href="#"><span class="fab fa-pinterest-p"></span></a></li>
-						<li><a href="#"><span class="fab fa-instagram"></span></a></li>
-						<li><a href="#"><span class="fab fa-youtube"></span></a></li>
-					</ul>
+                <!--Social Links-->
+                <div class="social-links">
+                    <ul class="clearfix">
+                        <li><a href="#"><span class="fab fa-twitter"></span></a></li>
+                        <li><a href="#"><span class="fab fa-facebook-square"></span></a></li>
+                        <li><a href="#"><span class="fab fa-pinterest-p"></span></a></li>
+                        <li><a href="#"><span class="fab fa-instagram"></span></a></li>
+                        <li><a href="#"><span class="fab fa-youtube"></span></a></li>
+                    </ul>
                 </div>
             </nav>
         </div><!-- End Mobile Menu -->
@@ -172,635 +259,423 @@
     <!-- End Main Header -->
 
     <!-- Main Slider -->
-	<section class="main-slider">
-		<div class="slider-box">
-		
-			<!-- Banner Carousel -->
-			<div class="banner-carousel owl-theme owl-carousel">
-			
-				<!-- Slide -->
-				<div class="slide">
-                	<div class="image-layer" style="background-image:url(images/main-slider/chicky.jpg)"></div>
-					<div class="auto-container">
-						<div class="content">
-							<h2>We make dream <br> clothings a reality</h2>
-							<div class="text">Since 2013, We inspired fragments of your life stories with the finest, classy and bossy clothings with cuty and kinky kids clothings and accessories.</div>
-							<div class="btns-box">
-								
-							</div>
-						</div>
-			
-					</div>
-				</div>
-				
-				<!-- Slide -->
-				<div class="slide">
-                	<div class="image-layer" style="background-image:url(images/main-slider/trendy\ \(2\).jpg)"></div>
-					<div class="auto-container">
-						<div class="content">
-							<h2>Designs Benefitting <br> Your Persona</h2>
-							<div class="text">Since 2013, We inspired fragments of your life stories with the finest classy, bossy, kiddy clothings and accessories.</div>
-							<div class="btns-box">
-								
-							</div>
-						</div>
-					</div>
-				</div>
-				
-				<!-- Slide -->
-				<div class="slide">
-                	<div class="image-layer" style="background-image:url(images/main-slider/banex\ \(1\).jpg)"></div>"
-						<div class="content">
-							<h2>A World Of <br> Fashion and Accessories</h2>
-							<div class="text">Since 2013, We inspired fragments of your life stories with the finest,classy,bossy and cutty adult and kiddies clothing.</div>
-							
-							</div>
-						</div>
-					</div>
-				</div>
-				
-			</div>
-			
-		</div>
-	</section>
-	<!-- End Banner Section -->
-	
-	<!-- Services Section -->
-	<section class="services-section">
-		<div class="auto-container">
-			<!-- Title Box -->
-			<div class="title-box">
-				<h2>Awesome clothings & whats trendy <br> explore cuteness.</h2>
-			</div>
-			
-			<div class="row clearfix">
-				<!-- Service Block -->
-				<div class="service-block col-lg-4 col-md-6 col-sm-12">
-					<div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
-						<div class="image">
-
-							<a href="residental-interior.html"><img src="images/resource/madam (1).jpg" alt="" /></a>
-						</div>
-						<div class="lower-content">
-							<h3><a href="residental-interior.html">kiddy"s cuteness</a></h3>
-							<div class="text">Proactively envisioned multimedia based exper tise and cross-media growth strategies.</div>
-							
-						</div>
-					</div>
-				</div>
-
-				<!-- Service Block -->
-				<div class="service-block col-lg-4 col-md-6 col-sm-12">
-					<div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
-						<div class="image">
-							<a href="residental-interior.html"><img src="images/resource/crystals (1).jpg" alt="" /></a>
-						</div>
-						<div class="lower-content">
-							<h3><a href="residental-interior.html">Residential Interiors</a></h3>
-							<div class="text">Proactively envisioned multimedia based exper tise and cross-media growth strategies.</div>
-							<a href="residental-interior.html" class="read-more">Read more</a>
-						</div>
-					</div>
-				</div>
-				<!-- Service Block -->
-				<div class="service-block col-lg-4 col-md-6 col-sm-12">
-					<div class="inner-box wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1500ms">
-						<div class="image">
-							<a href="fashion.html"><img src="images/main-slider/demour.jpg" alt="" /></a>
-						</div>
-						<div class="lower-content">
-							<h3><a href="fashion-world.html">fashion world</a></h3>
-							<div class="text">Proactively envisioned multimedia based exper tise and cross-media growth strategies. Seam lessly visualize quality intellectual.</div>
-							
-						</div>
-					</div>
-				</div>
-				
-				<!-- Service Block -->
-			<div class="service-block col-lg-4 col-md-6 col-sm-12">
-					<div class="inner-box wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
-						<div class="image">
-							<a href="office-interior.html"><img src="images/resource/georgeous.jpg" alt=""/></a>
-						</div>
-						<div class="lower-content">
-							<h3><a href="office-interior.html">accessories</a></h3>
-							<div class="text">Proactively envisioned multimedia based exper tise and cross-media growth strategies. Seam lessly visualize quality intellectual.</div>
-							
-						</div>
-					
-		
-				
-				
-			</div>
-			
-		</div>
-		</div>
-	</section>
-	<!-- End Services Section -->
-	
-	<!-- Services Section Two -->
-	<section class="services-section-two">
-		<div class="auto-container">
-			<!-- Sec Title -->
-			<div class="sec-title">
-				<h2>Our Services</h2>
-				<div class="text">Osed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci sed quia non numquam qui ratione voluptatem sequi nesciunt.</div>
-			</div>
-			
-			<div class="row clearfix">
-				
-				<!-- Service Block -->
-				<div class="service-block-two col-lg-4 col-md-6 col-sm-12">
-					<div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
-						<div class="content">
-							<div class="icon-box">
-								<span class="icon flaticon-house-1"></span>
-							</div>
-							<h3>Kiddy's wear</h3>
-							<div class="text">Lorem Ipsum is  simply my text of the printing and Ipsum is the Ipsum is simply.</div>
-							
-						</div>
-					</div>
-				</div>
-				
-		
-				
-			
-				<!-- Service Block -->
-				<div class="service-block-two col-lg-4 col-md-6 col-sm-12">
-					<div class="inner-box wow fadeInRight" data-wow-delay="600ms" data-wow-duration="1500ms">
-						<div class="content">
-							<div class="icon-box">
-								<span class="icon flaticon-hotel"></span>
-							</div>
-							<h3><a href="classy fashion.html">trendy wears</a></h3>
-							<div class="text">Lorem Ipsum is  simply my text of the printing and Ipsum is the Ipsum is simply.</div>
-							
-						</div>
-					</div>
-				</div>
-				
-				
-				<!-- Service Block -->
-				<div class="service-block-two col-lg-4 col-md-6 col-sm-12">
-					<div class="inner-box wow fadeInRight" data-wow-delay="600ms" data-wow-duration="1500ms">
-						<div class="content">
-							<div class="icon-box">
-								<span class="icon flaticon-hotel"></span>
-							</div>
-							<h3><a href="classy fashion.html">trendy fashion</a></h3>
-							<div class="text">Lorem Ipsum is  simply my text of the printing and Ipsum is the Ipsum is simply.</div>
-							
-						</div>
-					</div>
-				</div>
-				
-			</div>
-			
-		</div>
-	</section>
-	<!-- End Services Section Two -->
-	
-	<!-- Project Section -->
-	<section class="project-section">
-		<div class="auto-container">
-			<!-- Title Box -->
-			<div class="title-box">
-				<h2>Our Latest Projects</h2>
-			</div>
-		</div>
-		
-		<div class="outer-container">
-			
-			<!--Isotope Galery-->
-            <div class="sortable-masonry">
-                
-                <!--Filter-->
-                <div class="filters clearfix">
-                	
-                	<ul class="filter-tabs filter-btns text-center clearfix">
-                        <li class="active filter" data-role="button" data-filter=".all">All Projects</li>
-						<li class="filter" data-role="button" data-filter=".cloth">clothings</li>
-						<li class="filter" data-role="button" data-filter=".trendy wears">trendy wears</li>
-						<li class="filter" data-role="button" data-filter=".accessories">accessories</li>
-						<li class="filter" data-role="button" data-filter=".kiddy's wears">kiddy's wear</li>
-                    </ul>
-                    
+    <section class="main-slider">
+        <div class="slider-box">
+        
+            <!-- Banner Carousel -->
+            <div class="banner-carousel owl-theme owl-carousel">
+            
+                <!-- Slide -->
+                <div class="slide">
+                    <div class="image-layer" style="background-image:url(images/main-slider/chicky.jpg)"></div>
+                    <div class="auto-container">
+                        <div class="content">
+                            <h2>We make dream <br> clothings a reality</h2>
+                            <div class="text">Since 2013, We inspired fragments of your life stories with the finest, classy and bossy clothings with cuty and kinky kids clothings and accessories.</div>
+                            <div class="btns-box"></div>
+                        </div>
+                    </div>
                 </div>
                 
-				<div class="items-container row clearfix">
-				
-					<!-- Gallery Item -->
-					<div class="gallery-item large-block masonry-item all hospital commercial">
-						<div class="inner-box">
-							<figure class="image-box">
-								<img src="images/gallery/classy.jpg" alt="">
-								<!--Overlay Box-->
-								<div class="overlay-box">
-									<div class="overlay-inner">
-										<div class="content">
-											<h3><a href="projects-fullwidth.html">bossy lady</a></h3>
-											<a href="images/gallery/banex (2).jpg" data-fancybox="gallery-1" data-caption="" class="link"><span class="icon flaticon-magnifying-glass-1"></span></a>
-											<a href="projects-fullwidth.html" class="link"><span class="icon flaticon-unlink"></span></a>
-										</div>
-									</div>
-								</div>
-							</figure>
-						</div>
-					</div>
-					
-					<!-- Gallery Item -->
-					<div class="gallery-item small-block masonry-item all fashion">
-						<div class="inner-box">
-							<figure class="image-box">
-								<img src="images/gallery/biggy (1).jpg" alt="">
-								<!--Overlay Box-->
-								<div class="overlay-box">
-									<div class="overlay-inner">
-										<div class="content">
-											<h3><a href="projects-fullwidth.html">trendy</a></h3>
-											<a href="images/gallery/madam (2).jpg" data-fancybox="gallery-1" data-caption="" class="link"><span class="icon flaticon-magnifying-glass-1"></span></a>
-											<a href="projects-fullwidth.html" class="link"><span class="icon flaticon-unlink"></span></a>
-										</div>
-									</div>
-								</div>
-							</figure>
-						</div>
-					</div>
-					
-					<!-- Gallery Item -->
-					<div class="gallery-item small-block masonry-item all cloth office commercial">
-						<div class="inner-box">
-							<figure class="image-box">
-								<img src="images/gallery/elegant (2).jpg" alt="">
-								<!--Overlay Box-->
-								<div class="overlay-box">
-									<div class="overlay-inner">
-										<div class="content">
-											<h3><a href="projects-fullwidth.html">accessories</a></h3>
-											<a href="images/gallery/biggy (1).jpg" data-fancybox="gallery-1" data-caption="" class="link"><span class="icon flaticon-magnifying-glass-1"></span></a>
-											<a href="projects-fullwidth.html" class="link"><span class="icon flaticon-unlink"></span></a>
-										</div>
-									</div>
-								</div>
-							</figure>
-						</div>
-					</div>
-					
-					<!-- Gallery Item -->
-					<div class="gallery-item small-block masonry-item all commercial">
-						<div class="inner-box">
-							<figure class="image-box">
-								<img src="images/gallery/biggy (2).jpg" alt="">
-								<!--Overlay Box-->
-								<div class="overlay-box">
-									<div class="overlay-inner">
-										<div class="content">
-											<h3><a href="projects-fullwidth.html">trendy</a></h3>
-											<a href="images/gallery/classy.jpg" data-fancybox="gallery-1" data-caption="" class="link"><span class="icon flaticon-magnifying-glass-1"></span></a>
-											<a href="projects-fullwidth.html" class="link"><span class="icon flaticon-unlink"></span></a>
-										</div>
-									</div>
-								</div>
-							</figure>
-						</div>
-					</div>
-					
-					<!-- Gallery Item -->
-					<div class="gallery-item large-block masonry-item all Fashion">
-						<div class="inner-box">
-							<figure class="image-box">
-								<img src="images/gallery/demour.jpg" alt="">
-								<!--Overlay Box-->
-								<div class="overlay-box">
-									<div class="overlay-inner">
-										<div class="content">
-											<h3><a href="projects-fullwidth.html">trendy wears</a></h3>
-											<a href="images/gallery/trendy (2).jpg" data-fancybox="gallery-1" data-caption="" class="link"><span class="icon flaticon-magnifying-glass-1"></span></a>
-											<a href="projects-fullwidth.html" class="link"><span class="icon flaticon-unlink"></span></a>
-										</div>
-									</div>
-								</div>
-							</figure>
-						</div>
-					</div>
-					
-					<!-- Gallery Item -->
-					<div class="gallery-item small-block masonry-item all fashion">
-						<div class="inner-box">
-							<figure class="image-box">
-								<img src="images/gallery/elegant (2).jpg" alt="">
-								<!--Overlay Box-->
-								<div class="overlay-box">
-									<div class="overlay-inner">
-										<div class="content">
-											<h3><a href="projects-fullwidth.html">kiddies corner</a></h3>
-											<a href="images/gallery/baby (2).jpg" data-fancybox="gallery-1" data-caption="" class="link"><span class="icon flaticon-magnifying-glass-1"></span></a>
-											<a href="projects-fullwidth.html" class="link"><span class="icon flaticon-unlink"></span></a>
-										</div>
-									</div>
-								</div>
-							</figure>
-						</div>
-					</div>
-					
-					<!-- Gallery Item -->
-					<div class="gallery-item small-block masonry-item all kiddys wears">
-						<div class="inner-box">
-							<figure class="image-box">
-								<img src="images/gallery/allure.jpg" alt="">
-								<!--Overlay Box-->
-								<div class="overlay-box">
-									<div class="overlay-inner">
-										<div class="content">
-											<h3><a href="projects-fullwidth.html">kiddy's corner</a></h3>
-											<a href="images/gallery/baby (1).jpg" data-fancybox="gallery-1" data-caption="" class="link"><span class="icon flaticon-magnifying-glass-1"></span></a>
-											<a href="projects-fullwidth.html" class="link"><span class="icon flaticon-unlink"></span></a>
-										</div>
-									</div>
-								</div>
-							</figure>
-						</div>
-					</div>
-					
-				</div>
-				
-			</div>
-		
-			<!-- More Projects -->
-			<div class="more-projects">
-				<a href="projects-classic.html" class="projects">View All Projects</a>
-			</div>
-		
-		</div>
-	</section>
-	<!-- End Project Section -->
-	
-	<!-- Fluid Section One -->
-    <section class="fluid-section-one">
-    	<div class="outer-container clearfix">
-        	
-			<!--Content Column-->
-			<div class="content-column">
-				<div class="content-box">
-					<h2>Fashion made easy</h2>
-					<div class="text">To give you a fashion that is enriched with cuteness and also trendy, we bring you only the best in everything — quality clothings, trendy children's wears, quality accessories , complete trendy makeover and at affordable prices.</div>
-					<ul class="list-style-one">
-						<li>kiddy's world</li>
-						<li>trendy wears</li>
-						<li>accessories and more</li>
-						
-					</ul>
-					<div class="bold-text">Get your trendy wears, right here at Dynamic Fashion World <br> <a href="contact.html">Talk to a designer</a></div>
-				</div>
-			</div>
-			
-			<!--Image Column-->
-        	<div class="image-column" style="background-image: url(chicky.jpg)">
-				<div class="inner-column">
-					<div class="image">
-						<img src="chicky.jpg" alt="">
-					</div>
-					
-                            <i class="ripple"></i>
-						</div>
-					</a>
-				</div>
+                <!-- Slide -->
+                <div class="slide">
+                    <div class="image-layer" style="background-image:url(images/main-slider/trendy\ \(2\).jpg)"></div>
+                    <div class="auto-container">
+                        <div class="content">
+                            <h2>Designs Benefitting <br> Your Persona</h2>
+                            <div class="text">Since 2013, We inspired fragments of your life stories with the finest classy, bossy, kiddy clothings and accessories.</div>
+                            <div class="btns-box"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slide -->
+                <div class="slide">
+                    <div class="image-layer" style="background-image:url(images/main-slider/banex\ \(1\).jpg)"></div>
+                    <div class="auto-container">
+                        <div class="content">
+                            <h2>A World Of <br> Fashion and Accessories</h2>
+                            <div class="text">Since 2013, We inspired fragments of your life stories with the finest,classy,bossy and cutty adult and kiddies clothing.</div>
+                        </div>
+                    </div>
+                </div>
+                
             </div>
-            <!--End Image Column-->
-			
-		</div>
-	</section>
-	
-	<!-- Testimonial Section -->
-	<section class="testimonial-section">
-		<div class="auto-container">
-			<!-- Sec Title -->
-			<div class="sec-title-two centered">
-				<h2>What our customers says</h2>
-				<div class="title-text">Thousands of people done interior</div>
-			</div>
-			
-			<div class="testimonial-carousel owl-carousel owl-theme">
-				
-				<!-- Testimonial Block -->
-				<div class="testimonial-block">
-					<div class="inner-box">
-						<div class="content">
-							<div class="image-outer">
-								<div class="image">
-									<img src="images/resource/author-1.jpg" alt="" />
-								</div>
-							</div>
-							<h3>chira flourish</h3>
-							<div class="title">a topnotch clothings with a touch of classiness</div>
-							<div class="text">Osed quia consequuntur magni dolores eos qui rati one voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci sed quia non numqua.</div>
-						</div>
-					</div>
-				</div>
-				
-				<!-- Testimonial Block -->
-				<div class="testimonial-block">
-					<div class="inner-box">
-						<div class="content">
-							<div class="image-outer">
-								<div class="image">
-									<img src="images/resource/author-2.jpg" alt="" />
-								</div>
-							</div>
-							<h3>michael Noddy</h3>
-							<div class="title">I got simple elegant clothings from Dynamic Fashion World</div>
-							<div class="text">Osed quia consequuntur magni dolores eos qui rati one voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci sed quia non numqua.</div>
-						</div>
-					</div>
-				</div>
-				
-				<!-- Testimonial Block -->
-				<div class="testimonial-block">
-					<div class="inner-box">
-						<div class="content">
-							<div class="image-outer">
-								<div class="image">
-									<img src="images/resource/author-1.jpg" alt="" />
-								</div>
-							</div>
-							<h3>Mitchell sommy</h3>
-							<div class="title">i got luxurious accessoris from Dynamic fashion world</div>
-							<div class="text">Osed quia consequuntur magni dolores eos qui rati one voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci sed quia non numqua.</div>
-						</div>
-					</div>
-				</div>
-				
-				<!-- Testimonial Block -->
-				<div class="testimonial-block">
-					<div class="inner-box">
-						<div class="content">
-							<div class="image-outer">
-								<div class="image">
-									<img src="images/resource/author-2.jpg" alt="" />
-								</div>
-							</div>
-							<h3>Angel Zinny</h3>
-							<div class="title">exequite and stylish..i love it</div>
-							<div class="text">Osed quia consequuntur magni dolores eos qui rati one voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci sed quia non numqua.</div>
-						</div>
-					</div>
-				</div>
-				
-			</div>
-		</div>
-	</section>
-	<!-- End Testimonial Section -->
-	
+            
+        </div>
+    </section>
+    <!-- End Banner Section -->
+    
+    <!-- Services Section -->
+    <section class="services-section">
+        <div class="auto-container">
+            <!-- Title Box -->
+            <div class="title-box">
+                <h2>Awesome clothings & whats trendy <br> explore cuteness.</h2>
+            </div>
+            
+            <div class="row clearfix">
+                <!-- Service Block -->
+                <div class="service-block col-lg-4 col-md-6 col-sm-12">
+                    <div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+                        <div class="image">
+                            <a href="residental-interior.html"><img src="images/resource/madam (1).jpg" alt="" /></a>
+                        </div>
+                        <div class="lower-content">
+                            <h3><a href="residental-interior.html">kiddy"s cuteness</a></h3>
+                            <div class="text">Proactively envisioned multimedia based expertise and cross-media growth strategies.</div>
+                        </div>
+                    </div>
+                </div>
 
-	
-	<!-- News Section -->
-	<section class="news-section">
-		<div class="auto-container">
-			<!-- Sec Title -->
-			<div class="sec-title">
-				<h2>Need the latest designs in  fashion?  come over to our fashion world </h2>
-				<div class="text">Stay updated with latest trends, fashions, accessories and more</div>
-			</div>
-			
-			<div class="row clearfix">
-				
-				<!-- News Block -->
-				<div class="news-block col-lg-4 col-md-6 col-sm-12">
-					<div class="inner-box wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1500ms">
-						<div class="image">
-							<a href="blog-detail.html"><img src="images/resource/madam (1).jpg" alt="" /></a>
-						</div>
-						<div class="lower-content">
-							<ul class="post-meta">
-								<li>By <span>chinny</span></li>
-								<li>bossy clothings</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			
-				<!-- News Block -->
-				<div class="news-block col-lg-4 col-md-6 col-sm-12">
-					<div class="inner-box wow fadeInRight" data-wow-delay="250ms" data-wow-duration="1500ms">
-						<div class="image">
-							<a href="blog-detail.html"><img src="images/resource/allure.jpg" alt="" /></a>
-						</div>
-						<div class="lower-content">
-							<ul class="post-meta">
-								<li>By <span>sommy</span></li>
-								<li>Accessories, awesome</li>
-							</ul>
-							<h3><a href="blog-detail.html">kinky clothings for you and your kids ...</a></h3>
-							<a href="blog-detail.html" class="read-more">Read more <span class="icon flaticon-right-arrow-1"></span></a>
-						</div>
-					</div>
-				</div>
-				
-				<!-- News Block -->
-				<div class="news-block col-lg-4 col-md-6 col-sm-12">
-					<div class="inner-box wow fadeInRight" data-wow-delay="500ms" data-wow-duration="1500ms">
-						<div class="image">
-							<a href="blog-detail.html"><img src="images/resource/cuty.jpg" alt="" /></a>
-						</div>
-						<div class="lower-content">
-							<ul class="post-meta">
-								<li>By <span>Micheal noddy</span></li>news-3.jpg
-								<li>Accessories, awesome</li>
-							</ul>
-							<h3><a href="blog-detail.html">Kids clothings with a touch of kinkiness</a></h3>
-							<a href="blog-detail.html" class="read-more">Read more <span class="icon flaticon-right-arrow-1"></span></a>
-						</div>
-					</div>
-				</div>
-				
-			</div>
-			
-		</div>
-	</section>
-	<!-- End News Section -->
-	
-	<!-- Call To Action Section -->
-	<section class="call-to-action-section" style="background-image: url(images/background/baby\ \(2\).jpg)">
-		<div class="auto-container">
-			<h2>Think Fashion. Think Dynamic Fashion World</h2>
-			<div class="text">clothings for all styles and budgets, Choose from thousands of <br> designs. Heart your favorites to shortlist.</div>
-			
-		</div>
-	</section>
-	<!-- End new Section -->
+                <!-- Service Block -->
+                <div class="service-block col-lg-4 col-md-6 col-sm-12">
+                    <div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+                        <div class="image">
+                            <a href="residental-interior.html"><img src="images/resource/crystals (1).jpg" alt="" /></a>
+                        </div>
+                        <div class="lower-content">
+                            <h3><a href="residental-interior.html">Residential Interiors</a></h3>
+                            <div class="text">Proactively envisioned multimedia based expertise and cross-media growth strategies.</div>
+                            <a href="residental-interior.html" class="read-more">Read more</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Service Block -->
+                <div class="service-block col-lg-4 col-md-6 col-sm-12">
+                    <div class="inner-box wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1500ms">
+                        <div class="image">
+                            <a href="fashion.html"><img src="images/main-slider/demour.jpg" alt="" /></a>
+                        </div>
+                        <div class="lower-content">
+                            <h3><a href="fashion-world.html">fashion world</a></h3>
+                            <div class="text">Proactively envisioned multimedia based expertise and cross-media growth strategies. Seamlessly visualize quality intellectual.</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Service Block -->
+                <div class="service-block col-lg-4 col-md-6 col-sm-12">
+                    <div class="inner-box wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+                        <div class="image">
+                            <a href="office-interior.html"><img src="images/resource/georgeous.jpg" alt=""/></a>
+                        </div>
+                        <div class="lower-content">
+                            <h3><a href="office-interior.html">accessories</a></h3>
+                            <div class="text">Proactively envisioned multimedia based expertise and cross-media growth strategies. Seamlessly visualize quality intellectual.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Services Section -->
+    
+    <!-- Services Section Two -->
+    <section class="services-section-two">
+        <div class="auto-container">
+            <!-- Sec Title -->
+            <div class="sec-title">
+                <h2>Our Services</h2>
+                <div class="text">Osed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci sed quia non numquam qui ratione voluptatem sequi nesciunt.</div>
+            </div>
+            
+            <div class="row clearfix">
+                
+                <!-- Service Block -->
+                <div class="service-block-two col-lg-4 col-md-6 col-sm-12">
+                    <div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+                        <div class="content">
+                            <div class="icon-box">
+                                <span class="icon flaticon-house-1"></span>
+                            </div>
+                            <h3>Kiddy's wear</h3>
+                            <div class="text">Lorem Ipsum is simply my text of the printing and Ipsum is the Ipsum is simply.</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Service Block -->
+                <div class="service-block-two col-lg-4 col-md-6 col-sm-12">
+                    <div class="inner-box wow fadeInRight" data-wow-delay="600ms" data-wow-duration="1500ms">
+                        <div class="content">
+                            <div class="icon-box">
+                                <span class="icon flaticon-hotel"></span>
+                            </div>
+                            <h3><a href="classy fashion.html">trendy wears</a></h3>
+                            <div class="text">Lorem Ipsum is simply my text of the printing and Ipsum is the Ipsum is simply.</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Service Block -->
+                <div class="service-block-two col-lg-4 col-md-6 col-sm-12">
+                    <div class="inner-box wow fadeInRight" data-wow-delay="600ms" data-wow-duration="1500ms">
+                        <div class="content">
+                            <div class="icon-box">
+                                <span class="icon flaticon-hotel"></span>
+                            </div>
+                            <h3><a href="classy fashion.html">trendy fashion</a></h3>
+                            <div class="text">Lorem Ipsum is simply my text of the printing and Ipsum is the Ipsum is simply.</div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+        </div>
+    </section>
+    <!-- End Services Section Two -->
+    
+    <!-- Project Section -->
+    <section class="project-section">
+        <div class="auto-container">
+            <!-- Title Box -->
+            <div class="title-box">
+                <h2>Our Latest Projects</h2>
+            </div>
+        </div>
+        
+        <div class="outer-container">
+            <!--Isotope Galery-->
+            <div class="sortable-masonry">
+                <!--Filter-->
+                <div class="filters clearfix">
+                    <ul class="filter-tabs filter-btns text-center clearfix">
+                        <li class="active filter" data-role="button" data-filter=".all">All Projects</li>
+                        <li class="filter" data-role="button" data-filter=".cloth">clothings</li>
+                        <li class="filter" data-role="button" data-filter=".trendy wears">trendy wears</li>
+                        <li class="filter" data-role="button" data-filter=".accessories">accessories</li>
+                        <li class="filter" data-role="button" data-filter=".kiddy's wears">kiddy's wear</li>
+                    </ul>
+                </div>
+                
+                <div class="items-container row clearfix">
+                    <!-- Gallery Item -->
+                    <div class="gallery-item large-block masonry-item all hospital commercial">
+                        <div class="inner-box">
+                            <figure class="image-box">
+                                <img src="images/gallery/classy.jpg" alt="">
+                                <div class="overlay-box">
+                                    <div class="overlay-inner">
+                                        <div class="content">
+                                            <h3><a href="projects-fullwidth.html">bossy lady</a></h3>
+                                            <a href="images/gallery/banex (2).jpg" data-fancybox="gallery-1" data-caption="" class="link"><span class="icon flaticon-magnifying-glass-1"></span></a>
+                                            <a href="projects-fullwidth.html" class="link"><span class="icon flaticon-unlink"></span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </figure>
+                        </div>
+                    </div>
+                    
+                    <!-- Gallery Item -->
+                    <div class="gallery-item small-block masonry-item all fashion">
+                        <div class="inner-box">
+                            <figure class="image-box">
+                                <img src="images/gallery/biggy (1).jpg" alt="">
+                                <div class="overlay-box">
+                                    <div class="overlay-inner">
+                                        <div class="content">
+                                            <h3><a href="projects-fullwidth.html">trendy</a></h3>
+                                            <a href="images/gallery/madam (2).jpg" data-fancybox="gallery-1" data-caption="" class="link"><span class="icon flaticon-magnifying-glass-1"></span></a>
+                                            <a href="projects-fullwidth.html" class="link"><span class="icon flaticon-unlink"></span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </figure>
+                        </div>
+                    </div>
+                    
+                    <!-- More gallery items -->
+                    <div class="gallery-item small-block masonry-item all cloth office commercial">
+                        <div class="inner-box">
+                            <figure class="image-box">
+                                <img src="images/gallery/elegant (2).jpg" alt="">
+                                <div class="overlay-box">
+                                    <div class="overlay-inner">
+                                        <div class="content">
+                                            <h3><a href="projects-fullwidth.html">accessories</a></h3>
+                                            <a href="images/gallery/biggy (1).jpg" data-fancybox="gallery-1" data-caption="" class="link"><span class="icon flaticon-magnifying-glass-1"></span></a>
+                                            <a href="projects-fullwidth.html" class="link"><span class="icon flaticon-unlink"></span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="more-projects">
+                <a href="projects-classic.html" class="projects">View All Projects</a>
+            </div>
+        </div>
+    </section>
+    <!-- End Project Section -->
+    
+    <!-- Fluid Section One -->
+    <section class="fluid-section-one">
+        <div class="outer-container clearfix">
+            <!--Content Column-->
+            <div class="content-column">
+                <div class="content-box">
+                    <h2>Fashion made easy</h2>
+                    <div class="text">To give you a fashion that is enriched with cuteness and also trendy, we bring you only the best in everything — quality clothings, trendy children's wears, quality accessories , complete trendy makeover and at affordable prices.</div>
+                    <ul class="list-style-one">
+                        <li>kiddy's world</li>
+                        <li>trendy wears</li>
+                        <li>accessories and more</li>
+                    </ul>
+                    <div class="bold-text">Get your trendy wears, right here at Dynamic Fashion World <br> <a href="contact.html">Talk to a designer</a></div>
+                </div>
+            </div>
+            
+            <!--Image Column-->
+            <div class="image-column" style="background-image: url(chicky.jpg)">
+                <div class="inner-column">
+                    <div class="image">
+                        <img src="chicky.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonial Section -->
+    <section class="testimonial-section">
+        <div class="auto-container">
+            <div class="sec-title-two centered">
+                <h2>What our customers says</h2>
+                <div class="title-text">Thousands of people love our fashion</div>
+            </div>
+            
+            <div class="testimonial-carousel owl-carousel owl-theme">
+                <div class="testimonial-block">
+                    <div class="inner-box">
+                        <div class="content">
+                            <div class="image-outer">
+                                <div class="image">
+                                    <img src="images/resource/author-1.jpg" alt="" />
+                                </div>
+                            </div>
+                            <h3>Chira Flourish</h3>
+                            <div class="title">Topnotch clothings with a touch of classiness</div>
+                            <div class="text">Osed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-block">
+                    <div class="inner-box">
+                        <div class="content">
+                            <div class="image-outer">
+                                <div class="image">
+                                    <img src="images/resource/author-2.jpg" alt="" />
+                                </div>
+                            </div>
+                            <h3>Michael Noddy</h3>
+                            <div class="title">Simple elegant clothings from Dynamic Fashion World</div>
+                            <div class="text">Osed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- News Section -->
+    <section class="news-section">
+        <div class="auto-container">
+            <div class="sec-title">
+                <h2>Need the latest designs in fashion? Come over to our fashion world</h2>
+                <div class="text">Stay updated with latest trends, fashions, accessories and more</div>
+            </div>
+            
+            <div class="row clearfix">
+                <div class="news-block col-lg-4 col-md-6 col-sm-12">
+                    <div class="inner-box wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1500ms">
+                        <div class="image">
+                            <a href="blog-detail.html"><img src="images/resource/madam (1).jpg" alt="" /></a>
+                        </div>
+                        <div class="lower-content">
+                            <ul class="post-meta">
+                                <li>By <span>chinny</span></li>
+                                <li>bossy clothings</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="news-block col-lg-4 col-md-6 col-sm-12">
+                    <div class="inner-box wow fadeInRight" data-wow-delay="250ms" data-wow-duration="1500ms">
+                        <div class="image">
+                            <a href="blog-detail.html"><img src="images/resource/allure.jpg" alt="" /></a>
+                        </div>
+                        <div class="lower-content">
+                            <ul class="post-meta">
+                                <li>By <span>sommy</span></li>
+                                <li>Accessories, awesome</li>
+                            </ul>
+                            <h3><a href="blog-detail.html">kinky clothings for you and your kids ...</a></h3>
+                            <a href="blog-detail.html" class="read-more">Read more <span class="icon flaticon-right-arrow-1"></span></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="news-block col-lg-4 col-md-6 col-sm-12">
+                    <div class="inner-box wow fadeInRight" data-wow-delay="500ms" data-wow-duration="1500ms">
+                        <div class="image">
+                            <a href="blog-detail.html"><img src="images/resource/cuty.jpg" alt="" /></a>
+                        </div>
+                        <div class="lower-content">
+                            <ul class="post-meta">
+                                <li>By <span>Micheal noddy</span></li>
+                                <li>Accessories, awesome</li>
+                            </ul>
+                            <h3><a href="blog-detail.html">Kids clothings with a touch of kinkiness</a></h3>
+                            <a href="blog-detail.html" class="read-more">Read more <span class="icon flaticon-right-arrow-1"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Call To Action Section -->
+    <section class="call-to-action-section" style="background-image: url(images/background/baby\ \(2\).jpg)">
+        <div class="auto-container">
+            <h2>Think Fashion. Think Dynamic Fashion World</h2>
+            <div class="text">Clothings for all styles and budgets. Choose from thousands of designs. Heart your favorites to shortlist.</div>
+        </div>
+    </section>
 
-		<!--Main Footer-->
+    <!--Main Footer-->
     <footer class="main-footer">
-		<div class="auto-container">
-        	<!--Widgets Section-->
+        <div class="auto-container">
             <div class="widgets-section">
-            	<div class="row clearfix">
-                	
-                    <!--big column-->
+                <div class="row clearfix">
                     <div class="big-column col-lg-6 col-md-12 col-sm-12">
                         <div class="row clearfix">
-                        
-                            <!--Footer Column-->
                             <div class="footer-column col-lg-7 col-md-6 col-sm-12">
                                 <div class="footer-widget logo-widget">
-									<div class="logo">
-                                    	<a href="index.html"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" width="400" height="120">
-  <defs>
-    <linearGradient id="fashionGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#FF3366;stop-opacity:1" />
-      <stop offset="50%" style="stop-color:#FF6B35;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#FFD700;stop-opacity:1" />
-    </linearGradient>
-    <linearGradient id="globalGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#FF3366;stop-opacity:0.8" />
-      <stop offset="100%" style="stop-color:#FF6B35;stop-opacity:0.8" />
-    </linearGradient>
-  </defs>
-
-  <!-- Dress/Hanger Icon -->
-  <g transform="translate(60, 35)">
-    <!-- Hanger hook -->
-    <path d="M 40 0 Q 40 -15 30 -15 Q 20 -15 20 0 L 20 10" 
-          stroke="url(#fashionGradient)" stroke-width="3" fill="none" stroke-linecap="round"/>
-    
-    <!-- Hanger body -->
-    <path d="M 10 10 L 70 10 Q 75 10 75 15 L 60 45 Q 55 50 50 50 L 30 50 Q 25 50 20 45 L 5 15 Q 0 10 10 10 Z" 
-          stroke="url(#fashionGradient)" stroke-width="2.5" fill="none"/>
-    
-    <!-- Dress shape -->
-    <path d="M 25 45 L 35 25 L 40 30 L 45 25 L 55 45" 
-          stroke="url(#fashionGradient)" stroke-width="2" fill="none"/>
-  </g>
-
-  <!-- Globe/World element -->
-  <g transform="translate(120, 25)">
-    <circle cx="40" cy="40" r="30" stroke="url(#globalGradient)" stroke-width="2.5" fill="none"/>
-    <!-- Latitude lines -->
-    <ellipse cx="40" cy="40" rx="30" ry="10" stroke="url(#fashionGradient)" stroke-width="1.5" fill="none"/>
-    <ellipse cx="40" cy="40" rx="15" ry="30" stroke="url(#fashionGradient)" stroke-width="1.5" fill="none"/>
-    <!-- Small fashion icons on globe -->
-    <circle cx="30" cy="30" r="3" fill="#FF3366"/>
-    <circle cx="50" cy="35" r="2.5" fill="#FF6B35"/>
-    <circle cx="35" cy="50" r="2" fill="#FFD700"/>
-  </g>
-
-  <!-- Text -->
-  <text x="200" y="65" font-family="Arial, Helvetica, sans-serif" font-size="42" font-weight="bold" 
-        fill="url(#fashionGradient)" letter-spacing="3">
-    FASHION
-  </text>
-  <text x="210" y="92" font-family="Arial, Helvetica, sans-serif" font-size="18" 
-        fill="#666" letter-spacing="8" font-weight="300">
-    WORLD
-  </text>
-  
-  <!-- Tagline -->
-  <text x="200" y="108" font-family="Arial, Helvetica, sans-serif" font-size="10" 
-        fill="#999" letter-spacing="5" text-anchor="middle">
-    STYLE &amp; ELEGANCE
-  </text>
-</svg></a>
+                                    <div class="logo">
+                                        <a href="index.html">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" width="280" height="84">
+                                                <defs>
+                                                    <linearGradient id="footerGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                                        <stop offset="0%" style="stop-color:#FF3366;stop-opacity:1" />
+                                                        <stop offset="100%" style="stop-color:#FF6B35;stop-opacity:1" />
+                                                    </linearGradient>
+                                                </defs>
+                                                <text x="50" y="55" font-family="'Playfair Display', Georgia, serif" font-size="32" font-weight="700" fill="url(#footerGradient)" letter-spacing="3">
+                                                    FASHION
+                                                </text>
+                                                <text x="58" y="78" font-family="Arial, sans-serif" font-size="13" fill="#888" letter-spacing="6">
+                                                    WORLD
+                                                </text>
+                                            </svg>
+                                        </a>
                                     </div>
                                     <div class="text">We inspired fragments of your life stories with the finest, classy, bossy clothings and cuty, kinky kids collections and accessories since 2013.</div>
                                     <ul class="social-icons">
@@ -809,81 +684,65 @@
                                         <li><a href="#"><span class="fab fa-twitter"></span></a></li>
                                         <li><a href="#"><span class="fab fa-google-plus-g"></span></a></li>
                                     </ul>
-								</div>
-							</div>
-							
-							<!--Footer Column-->
+                                </div>
+                            </div>
+                            
                             <div class="footer-column col-lg-5 col-md-6 col-sm-12">
                                 <div class="footer-widget links-widget">
-                                	<h2>Quick links</h2>
-									<div class="widget-content">
-										<ul class="list">
-                                        	<li><a href="#">About Gaille</a></li>
+                                    <h2>Quick links</h2>
+                                    <div class="widget-content">
+                                        <ul class="list">
+                                            <li><a href="#">About Gaille</a></li>
                                             <li><a href="#">Privacy Policy</a></li>
                                             <li><a href="#">Terms & Conditionis</a></li>
                                             <li><a href="#">Faq</a></li>
                                         </ul>
                                     </div>
-								</div>
-							</div>
-						
-						</div>
-					</div>
-					
-					<!--big column-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
                     <div class="big-column col-lg-6 col-md-12 col-sm-12">
                         <div class="row clearfix">
-                        
-                            <!--Footer Column-->
                             <div class="footer-column col-lg-5 col-md-6 col-sm-12">
                                 <div class="footer-widget contact-widget">
-									<h2>Contact Info</h2>
-									<div class="widget-content">
-										<a href="tel:+2347033328869" class="contact-number">07033328869</a>
-										<ul>
-											<li>Awka, Anambra state</li>
-											<li>Email :<a href="mailto:fashionworld@gmail.com"> fashionworld@gmail.com</a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							
-							<!--Footer Column-->
+                                    <h2>Contact Info</h2>
+                                    <div class="widget-content">
+                                        <a href="tel:+2347033328869" class="contact-number">07033328869</a>
+                                        <ul>
+                                            <li>Awka, Anambra state</li>
+                                            <li>Email :<a href="mailto:fashionworld@gmail.com"> fashionworld@gmail.com</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
                             <div class="footer-column col-lg-7 col-md-6 col-sm-12">
                                 <div class="footer-widget newsletter-widget">
-                                	<h2>Newsletter</h2>
-									<div class="text">Get Special offers & Discounts</div>
-									<!-- Newsletter Form -->
-									<div class="newsletter-form">
-										<form method="post" action="templateshub.net">
-											<div class="form-group">
-												<input type="email" name="email" value="" placeholder="Enter your email address" required>
-												<button type="submit" class="theme-btn btn-style-one"><span class="txt">Subscribe</span></button>
-											</div>
-										</form>
-									</div>
-								</div>
-							</div>
-						
-						</div>
-					</div>
-					
-				</div>
-
-			
-			
-		</div>
-	</footer>
-	
+                                    <h2>Newsletter</h2>
+                                    <div class="text">Get Special offers & Discounts</div>
+                                    <div class="newsletter-form">
+                                        <form method="post" action="#">
+                                            <div class="form-group">
+                                                <input type="email" name="email" value="" placeholder="Enter your email address" required>
+                                                <button type="submit" class="theme-btn btn-style-one"><span class="txt">Subscribe</span></button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 </div>  
-<!--End pagewrapper-->
 
 <!--Scroll to top-->
 <div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-angle-up"></span></div>
 
-<!--Search Popup-->
-
-<!--Scroll to top-->
 <script src="js/jquery.js"></script>
 <script src="js/popper.min.js"></script>
 <script src="js/jquery-ui.js"></script>
@@ -897,5 +756,4 @@
 <script src="js/script.js"></script>
 </body>
 
-<!-- stella-orre/  30 Nov 2019 03:45:45 GMT -->
 </html>
