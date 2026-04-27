@@ -446,103 +446,329 @@
                 </div>
             </div>
             
-            <!--Nav Box-->
-            <div class="nav-outer clearfix" style="float: right;">
-                <!--Mobile Navigation Toggler-->
-                <div class="mobile-nav-toggler"><span class="icon flaticon-menu-1"></span></div>
-                <nav class="main-menu navbar-expand-md navbar-light">
-                    <div class="navbar-header">
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        </button>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Dynamic Fashion World - Premium Clothing & Accessories</title>
+    
+    <!-- Stylesheets -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+    
+    <!-- Responsive Meta Tags -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    
+    <style>
+        /* Custom Styles for Professional Layout */
+        .header-upper .auto-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .header-upper .logo-outer {
+            flex: 0 0 auto;
+        }
+        
+        .header-upper .logo {
+            padding: 15px 0;
+        }
+        
+        .header-upper .logo svg {
+            display: block;
+            transition: all 0.3s ease;
+        }
+        
+        .header-upper .nav-outer {
+            flex: 0 0 auto;
+        }
+        
+        .main-menu .navigation {
+            display: flex;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        
+        .main-menu .navigation > li {
+            margin-left: 30px;
+        }
+        
+        .main-menu .navigation > li > a {
+            font-size: 16px;
+            font-weight: 500;
+            color: #333;
+            padding: 10px 0;
+            display: block;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        
+        .main-menu .navigation > li > a:hover,
+        .main-menu .navigation > li.current > a {
+            color: #FF3366;
+        }
+        
+        .mobile-nav-toggler {
+            display: none;
+            cursor: pointer;
+        }
+        
+        @media (max-width: 991px) {
+            .main-menu .navigation {
+                display: none;
+            }
+            .mobile-nav-toggler {
+                display: block;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-upper .logo svg {
+                width: 250px;
+                height: auto;
+            }
+        }
+        
+        .logo:hover svg {
+            opacity: 0.95;
+            transform: scale(1.02);
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="page-wrapper">
+    
+    <!-- Preloader -->
+    <div class="preloader"></div>
+
+    <!-- Main Header -->
+    <header class="main-header header-style-one">
+        
+        <!-- Header Top -->
+        <div class="header-top">
+            <div class="auto-container clearfix">
+                <div class="top-left clearfix">
+                    <div class="text">
+                        <span class="icon flaticon-call-answer"></span> 
+                        Need help? Call Us Now : 
+                        <a href="tel:0703-332-8869" class="number">0703 332 8869</a>
                     </div>
-					
-                  <button class="navbar-toggler" type="button" data-toggle="collapse" ></button>
-					
-					<ul>
-                    </div>
-                </nav>
+                </div>
+                <div class="top-right clearfix">
+                    <ul class="info-list">
+                        <li><a href="about.html">Our Story</a></li>
+                        <li><a href="blog.html">Inspiration</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
-</div></a>
+        <!-- End Header Top -->
+
+        <!-- Header Upper -->
+        <div class="header-upper">
+            <div class="auto-container clearfix">
+                
+                <!-- Logo Area -->
+                <div class="logo-outer">
+                    <div class="logo">
+                        <a href="index.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" width="320" height="96">
+                                <defs>
+                                    <linearGradient id="fashionGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#FF3366;stop-opacity:1" />
+                                        <stop offset="50%" style="stop-color:#FF6B35;stop-opacity:1" />
+                                        <stop offset="100%" style="stop-color:#FFD700;stop-opacity:1" />
+                                    </linearGradient>
+                                </defs>
+                                
+                                <!-- Dress Icon -->
+                                <g transform="translate(50, 28)">
+                                    <path d="M 35 0 Q 35 -12 26 -12 Q 17 -12 17 0 L 17 8" 
+                                          stroke="url(#fashionGradient)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                                    <path d="M 8 8 L 62 8 Q 66 8 66 12 L 52 38 Q 48 42 43 42 L 27 42 Q 22 42 18 38 L 4 12 Q 0 8 8 8 Z" 
+                                          stroke="url(#fashionGradient)" stroke-width="2" fill="none"/>
+                                    <path d="M 21 38 L 30 20 L 34 25 L 38 20 L 47 38" 
+                                          stroke="url(#fashionGradient)" stroke-width="1.8" fill="none"/>
+                                </g>
+                                
+                                <!-- Text -->
+                                <text x="175" y="58" font-family="'Playfair Display', Georgia, serif" font-size="36" font-weight="700" 
+                                      fill="url(#fashionGradient)" letter-spacing="3">
+                                    FASHION
+                                </text>
+                                <text x="183" y="82" font-family="Arial, sans-serif" font-size="15" 
+                                      fill="#888" letter-spacing="7" font-weight="400">
+                                    WORLD
+                                </text>
+                                <text x="175" y="96" font-family="Arial, sans-serif" font-size="8" 
+                                      fill="#AAA" letter-spacing="4" text-anchor="middle">
+                                    STYLE &amp; ELEGANCE
+                                </text>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Navigation Box -->
+                <div class="nav-outer clearfix">
+                    <div class="mobile-nav-toggler">
+                        <span class="icon flaticon-menu-1"></span>
+                    </div>
+                    
+                    <nav class="main-menu navbar-expand-md navbar-light">
+                        <div class="collapse navbar-collapse clearfix" id="navbarSupportedContent">
+                            <ul class="navigation clearfix">
+                                <li class="current"><a href="index.html">Home</a></li>
+                                <li><a href="about.html">About us</a></li>
+                                <li><a href="projects-classic.html">Projects</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+                
+            </div>
+        </div>
+        <!-- End Header Upper -->
+        
+    </header>
+    <!-- End Main Header -->
+
+    <!-- Main Footer -->
+    <footer class="main-footer">
+        <div class="auto-container">
+            
+            <!-- Widgets Section -->
+            <div class="widgets-section">
+                <div class="row clearfix">
+                    
+                    <!-- Left Big Column -->
+                    <div class="big-column col-lg-6 col-md-12 col-sm-12">
+                        <div class="row clearfix">
+                            
+                            <!-- Logo Widget -->
+                            <div class="footer-column col-lg-7 col-md-6 col-sm-12">
+                                <div class="footer-widget logo-widget">
+                                    <div class="logo">
+                                        <a href="index.html">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" width="280" height="84">
+                                                <defs>
+                                                    <linearGradient id="footerGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                                        <stop offset="0%" style="stop-color:#FF3366;stop-opacity:1" />
+                                                        <stop offset="100%" style="stop-color:#FF6B35;stop-opacity:1" />
+                                                    </linearGradient>
+                                                </defs>
+                                                <text x="50" y="55" font-family="'Playfair Display', Georgia, serif" font-size="32" font-weight="700" 
+                                                      fill="url(#footerGradient)" letter-spacing="3">
+                                                    FASHION
+                                                </text>
+                                                <text x="58" y="78" font-family="Arial, sans-serif" font-size="13" 
+                                                      fill="#888" letter-spacing="6">
+                                                    WORLD
+                                                </text>
+                                            </svg>
+                                        </a>
                                     </div>
-                                    <div class="text">We inspired fragments of your life stories with the finest, classy, bossy clothings and cuty, kinky kids collections and accessories since 2013.</div>
+                                    <div class="text">
+                                        We inspired fragments of your life stories with the finest, classy, bossy clothings 
+                                        and cuty, kinky kids collections and accessories since 2013.
+                                    </div>
                                     <ul class="social-icons">
                                         <li><a href="#"><span class="fab fa-facebook-f"></span></a></li>
                                         <li><a href="#"><span class="fab fa-linkedin-in"></span></a></li>
                                         <li><a href="#"><span class="fab fa-twitter"></span></a></li>
                                         <li><a href="#"><span class="fab fa-google-plus-g"></span></a></li>
                                     </ul>
-								</div>
-							</div>
-							
-							<!--Footer Column-->
+                                </div>
+                            </div>
+                            
+                            <!-- Quick Links Widget -->
                             <div class="footer-column col-lg-5 col-md-6 col-sm-12">
                                 <div class="footer-widget links-widget">
-                                	<h2>Quick links</h2>
-									<div class="widget-content">
-										<ul class="list">
-                                        	<li><a href="#">About Gaille</a></li>
+                                    <h2>Quick links</h2>
+                                    <div class="widget-content">
+                                        <ul class="list">
+                                            <li><a href="#">About Gaille</a></li>
                                             <li><a href="#">Privacy Policy</a></li>
-                                            <li><a href="#">Terms & Conditionis</a></li>
+                                            <li><a href="#">Terms & Conditions</a></li>
                                             <li><a href="#">Faq</a></li>
                                         </ul>
                                     </div>
-								</div>
-							</div>
-						
-						</div>
-					</div>
-					
-					<!--big column-->
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                    <!-- Right Big Column -->
                     <div class="big-column col-lg-6 col-md-12 col-sm-12">
                         <div class="row clearfix">
-                        
-                            <!--Footer Column-->
+                            
+                            <!-- Contact Widget -->
                             <div class="footer-column col-lg-5 col-md-6 col-sm-12">
                                 <div class="footer-widget contact-widget">
-									<h2>Contact Info</h2>
-									<div class="widget-content">
-										<a href="tel:+2347033328869" class="contact-number">07033328869</a>
-										<ul>
-											<li>Awka, Anambra state</li>
-											<li>Email :<a href="mailto:fashionworld@gmail.com"> fashionworld@gmail.com</a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							
-							<!--Footer Column-->
+                                    <h2>Contact Info</h2>
+                                    <div class="widget-content">
+                                        <a href="tel:+2347033328869" class="contact-number">07033328869</a>
+                                        <ul>
+                                            <li>Awka, Anambra state</li>
+                                            <li>Email: <a href="mailto:fashionworld@gmail.com">fashionworld@gmail.com</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Newsletter Widget -->
                             <div class="footer-column col-lg-7 col-md-6 col-sm-12">
                                 <div class="footer-widget newsletter-widget">
-                                	<h2>Newsletter</h2>
-									<div class="text">Get Special offers & Discounts</div>
-									<!-- Newsletter Form -->
-									<div class="newsletter-form">
-										<form method="post" action="templateshub.net">
-											<div class="form-group">
-												<input type="email" name="email" value="" placeholder="Enter your email address" required>
-												<button type="submit" class="theme-btn btn-style-one"><span class="txt">Subscribe</span></button>
-											</div>
-										</form>
-									</div>
-								</div>
-							</div>
-						
-						</div>
-					</div>
-					
-				</div>
-
-			
-			
-		</div>
-	</footer>
-	
+                                    <h2>Newsletter</h2>
+                                    <div class="text">Get Special offers & Discounts</div>
+                                    
+                                    <div class="newsletter-form">
+                                        <form method="post" action="#">
+                                            <div class="form-group">
+                                                <input type="email" name="email" value="" 
+                                                       placeholder="Enter your email address" required>
+                                                <button type="submit" class="theme-btn btn-style-one">
+                                                    <span class="txt">Subscribe</span>
+                                                </button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <!-- End Widgets Section -->
+            
+        </div>
+    </footer>
+    <!-- End Main Footer -->
+    
 </div>  
+<!-- End Page Wrapper -->
 
-<!--Scroll to top-->
-<div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-angle-up"></span></div>
+<!-- Scroll to Top -->
+<div class="scroll-to-top scroll-to-target" data-target="html">
+    <span class="fa fa-angle-up"></span>
+</div>
 
 <!-- Scripts -->
 <script src="js/jquery.js"></script>
@@ -556,5 +782,6 @@
 <script src="js/appear.js"></script>
 <script src="js/scrollbar.js"></script>
 <script src="js/script.js"></script>
+
 </body>
 </html>
