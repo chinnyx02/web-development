@@ -647,141 +647,486 @@
     </header>
     <!-- End Main Header -->
 
-    <!-- Main Footer -->
-    <footer class="main-footer">
-        <div class="auto-container">
-            
-            <!-- Widgets Section -->
-            <div class="widgets-section">
-                <div class="row clearfix">
-                    
-                    <!-- Left Big Column -->
-                    <div class="big-column col-lg-6 col-md-12 col-sm-12">
-                        <div class="row clearfix">
-                            
-                            <!-- Logo Widget -->
-                            <div class="footer-column col-lg-7 col-md-6 col-sm-12">
-                                <div class="footer-widget logo-widget">
-                                    <div class="logo">
-                                        <a href="index.html">
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" width="280" height="84">
-                                                <defs>
-                                                    <linearGradient id="footerGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                                        <stop offset="0%" style="stop-color:#FF3366;stop-opacity:1" />
-                                                        <stop offset="100%" style="stop-color:#FF6B35;stop-opacity:1" />
-                                                    </linearGradient>
-                                                </defs>
-                                                <text x="50" y="55" font-family="'Playfair Display', Georgia, serif" font-size="32" font-weight="700" 
-                                                      fill="url(#footerGradient)" letter-spacing="3">
-                                                    FASHION
-                                                </text>
-                                                <text x="58" y="78" font-family="Arial, sans-serif" font-size="13" 
-                                                      fill="#888" letter-spacing="6">
-                                                    WORLD
-                                                </text>
-                                            </svg>
-                                        </a>
-                                    </div>
-                                    <div class="text">
-                                        We inspired fragments of your life stories with the finest, classy, bossy clothings 
-                                        and cuty, kinky kids collections and accessories since 2013.
-                                    </div>
-                                    <ul class="social-icons">
-                                        <li><a href="#"><span class="fab fa-facebook-f"></span></a></li>
-                                        <li><a href="#"><span class="fab fa-linkedin-in"></span></a></li>
-                                        <li><a href="#"><span class="fab fa-twitter"></span></a></li>
-                                        <li><a href="#"><span class="fab fa-google-plus-g"></span></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            
-                            <!-- Quick Links Widget -->
-                            <div class="footer-column col-lg-5 col-md-6 col-sm-12">
-                                <div class="footer-widget links-widget">
-                                    <h2>Quick links</h2>
-                                    <div class="widget-content">
-                                        <ul class="list">
-                                            <li><a href="#">About Gaille</a></li>
-                                            <li><a href="#">Privacy Policy</a></li>
-                                            <li><a href="#">Terms & Conditions</a></li>
-                                            <li><a href="#">Faq</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                        </div>
-                    </div>
-                    
-                    <!-- Right Big Column -->
-                    <div class="big-column col-lg-6 col-md-12 col-sm-12">
-                        <div class="row clearfix">
-                            
-                            <!-- Contact Widget -->
-                            <div class="footer-column col-lg-5 col-md-6 col-sm-12">
-                                <div class="footer-widget contact-widget">
-                                    <h2>Contact Info</h2>
-                                    <div class="widget-content">
-                                        <a href="tel:+2347033328869" class="contact-number">07033328869</a>
-                                        <ul>
-                                            <li>Awka, Anambra state</li>
-                                            <li>Email: <a href="mailto:fashionworld@gmail.com">fashionworld@gmail.com</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- Newsletter Widget -->
-                            <div class="footer-column col-lg-7 col-md-6 col-sm-12">
-                                <div class="footer-widget newsletter-widget">
-                                    <h2>Newsletter</h2>
-                                    <div class="text">Get Special offers & Discounts</div>
-                                    
-                                    <div class="newsletter-form">
-                                        <form method="post" action="#">
-                                            <div class="form-group">
-                                                <input type="email" name="email" value="" 
-                                                       placeholder="Enter your email address" required>
-                                                <button type="submit" class="theme-btn btn-style-one">
-                                                    <span class="txt">Subscribe</span>
-                                                </button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                        </div>
-                    </div>
-                    
-                </div>
-            </div>
-            <!-- End Widgets Section -->
-            
-        </div>
-    </footer>
-    <!-- End Main Footer -->
+  <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Dynamic Fashion World - Premium Clothing & Accessories</title>
     
-</div>  
-<!-- End Page Wrapper -->
+    <!-- Stylesheets -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+    
+    <style>
+        /* =============================================
+           CUSTOM PROFESSIONAL STYLES
+        ============================================= */
+        
+        /* Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            overflow-x: hidden;
+        }
+        
+        /* Footer Styles */
+        .main-footer {
+            background: #1a1a1a;
+            color: #fff;
+            padding: 70px 0 30px;
+            position: relative;
+        }
+        
+        .main-footer h2 {
+            color: #fff;
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 12px;
+        }
+        
+        .main-footer h2:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background: linear-gradient(90deg, #FF3366, #FFD700);
+        }
+        
+        .footer-widget {
+            margin-bottom: 30px;
+        }
+        
+        .logo-widget .text {
+            color: #aaa;
+            line-height: 1.8;
+            margin: 20px 0;
+            font-size: 14px;
+        }
+        
+        /* Social Icons */
+        .social-icons {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0 0;
+            display: flex;
+            gap: 12px;
+        }
+        
+        .social-icons li a {
+            display: inline-block;
+            width: 36px;
+            height: 36px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 36px;
+            color: #fff;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icons li a:hover {
+            background: #FF3366;
+            transform: translateY(-3px);
+        }
+        
+        /* Quick Links */
+        .links-widget .list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .links-widget .list li {
+            margin-bottom: 12px;
+        }
+        
+        .links-widget .list li a {
+            color: #aaa;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 14px;
+        }
+        
+        .links-widget .list li a:hover {
+            color: #FF3366;
+            padding-left: 5px;
+        }
+        
+        /* Contact Widget */
+        .contact-widget .contact-number {
+            font-size: 24px;
+            font-weight: 700;
+            color: #FF3366;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 20px;
+        }
+        
+        .contact-widget ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .contact-widget ul li {
+            color: #aaa;
+            margin-bottom: 12px;
+            font-size: 14px;
+        }
+        
+        .contact-widget ul li a {
+            color: #aaa;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .contact-widget ul li a:hover {
+            color: #FF3366;
+        }
+        
+        /* Newsletter Form */
+        .newsletter-form .form-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        
+        .newsletter-form input {
+            flex: 1;
+            padding: 12px 15px;
+            border: 1px solid #333;
+            background: #222;
+            color: #fff;
+            border-radius: 4px;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+        
+        .newsletter-form input:focus {
+            border-color: #FF3366;
+        }
+        
+        .theme-btn {
+            background: linear-gradient(90deg, #FF3366, #FF6B35);
+            color: #fff;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .theme-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 51, 102, 0.3);
+        }
+        
+        /* Scroll to Top */
+        .scroll-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 45px;
+            height: 45px;
+            background: linear-gradient(90deg, #FF3366, #FF6B35);
+            color: #fff;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 45px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+        }
+        
+        .scroll-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .scroll-to-top:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(255, 51, 102, 0.4);
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 991px) {
+            .main-footer {
+                padding: 50px 0 20px;
+            }
+            
+            .newsletter-form .form-group {
+                flex-direction: column;
+            }
+            
+            .theme-btn {
+                width: 100%;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .main-footer h2:after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            
+            .main-footer h2 {
+                text-align: center;
+            }
+            
+            .social-icons {
+                justify-content: center;
+            }
+            
+            .logo-widget .text {
+                text-align: center;
+            }
+        }
+        
+        /* Animation Classes */
+        .fadeInUp {
+            animation: fadeInUp 0.8s ease forwards;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
 
-<!-- Scroll to Top -->
-<div class="scroll-to-top scroll-to-target" data-target="html">
-    <span class="fa fa-angle-up"></span>
-</div>
+<body>
 
-<!-- Scripts -->
-<script src="js/jquery.js"></script>
-<script src="js/popper.min.js"></script>
-<script src="js/jquery-ui.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery.fancybox.js"></script>
-<script src="js/isotope.js"></script>
-<script src="js/owl.js"></script>
-<script src="js/wow.js"></script>
-<script src="js/appear.js"></script>
-<script src="js/scrollbar.js"></script>
-<script src="js/script.js"></script>
+    <!-- Main Page Wrapper -->
+    <div class="page-wrapper">
+        
+        <!-- Main Footer -->
+        <footer class="main-footer">
+            <div class="auto-container">
+                
+                <!-- Widgets Section -->
+                <div class="widgets-section">
+                    <div class="row clearfix">
+                        
+                        <!-- Left Big Column -->
+                        <div class="big-column col-lg-6 col-md-12 col-sm-12">
+                            <div class="row clearfix">
+                                
+                                <!-- Logo Widget -->
+                                <div class="footer-column col-lg-7 col-md-6 col-sm-12 fadeInUp" 
+                                     style="animation-delay: 0.1s;">
+                                    <div class="footer-widget logo-widget">
+                                        <div class="logo">
+                                            <a href="index.html">
+                                                <svg xmlns="http://www.w3.org/2000/svg" 
+                                                     viewBox="0 0 400 120" 
+                                                     width="280" 
+                                                     height="84">
+                                                    <defs>
+                                                        <linearGradient id="footerGradient" 
+                                                                        x1="0%" y1="0%" 
+                                                                        x2="100%" y2="100%">
+                                                            <stop offset="0%" 
+                                                                  style="stop-color:#FF3366;stop-opacity:1" />
+                                                            <stop offset="100%" 
+                                                                  style="stop-color:#FF6B35;stop-opacity:1" />
+                                                        </linearGradient>
+                                                    </defs>
+                                                    <text x="50" 
+                                                          y="55" 
+                                                          font-family="'Playfair Display', Georgia, serif" 
+                                                          font-size="32" 
+                                                          font-weight="700" 
+                                                          fill="url(#footerGradient)" 
+                                                          letter-spacing="3">
+                                                        FASHION
+                                                    </text>
+                                                    <text x="58" 
+                                                          y="78" 
+                                                          font-family="Arial, sans-serif" 
+                                                          font-size="13" 
+                                                          fill="#888" 
+                                                          letter-spacing="6">
+                                                        WORLD
+                                                    </text>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                        <div class="text">
+                                            We inspired fragments of your life stories with the finest, 
+                                            classy, bossy clothings and cuty, kinky kids collections 
+                                            and accessories since 2013.
+                                        </div>
+                                        <ul class="social-icons">
+                                            <li><a href="#" aria-label="Facebook"><span class="fab fa-facebook-f"></span></a></li>
+                                            <li><a href="#" aria-label="LinkedIn"><span class="fab fa-linkedin-in"></span></a></li>
+                                            <li><a href="#" aria-label="Twitter"><span class="fab fa-twitter"></span></a></li>
+                                            <li><a href="#" aria-label="Google Plus"><span class="fab fa-google-plus-g"></span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                <!-- Quick Links Widget -->
+                                <div class="footer-column col-lg-5 col-md-6 col-sm-12 fadeInUp" 
+                                     style="animation-delay: 0.2s;">
+                                    <div class="footer-widget links-widget">
+                                        <h2>Quick Links</h2>
+                                        <div class="widget-content">
+                                            <ul class="list">
+                                                <li><a href="#">About Gaille</a></li>
+                                                <li><a href="#">Privacy Policy</a></li>
+                                                <li><a href="#">Terms & Conditions</a></li>
+                                                <li><a href="#">FAQs</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
+                        <!-- Right Big Column -->
+                        <div class="big-column col-lg-6 col-md-12 col-sm-12">
+                            <div class="row clearfix">
+                                
+                                <!-- Contact Widget -->
+                                <div class="footer-column col-lg-5 col-md-6 col-sm-12 fadeInUp" 
+                                     style="animation-delay: 0.3s;">
+                                    <div class="footer-widget contact-widget">
+                                        <h2>Contact Info</h2>
+                                        <div class="widget-content">
+                                            <a href="tel:+2347033328869" class="contact-number">
+                                                0703 332 8869
+                                            </a>
+                                            <ul>
+                                                <li><i class="fas fa-map-marker-alt"></i> Awka, Anambra State, Nigeria</li>
+                                                <li>
+                                                    <i class="fas fa-envelope"></i> 
+                                                    Email: <a href="mailto:fashionworld@gmail.com">fashionworld@gmail.com</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Newsletter Widget -->
+                                <div class="footer-column col-lg-7 col-md-6 col-sm-12 fadeInUp" 
+                                     style="animation-delay: 0.4s;">
+                                    <div class="footer-widget newsletter-widget">
+                                        <h2>Newsletter</h2>
+                                        <div class="text">Get special offers & discounts</div>
+                                        
+                                        <div class="newsletter-form">
+                                            <form method="post" action="#" id="newsletterForm">
+                                                <div class="form-group">
+                                                    <input type="email" 
+                                                           name="email" 
+                                                           placeholder="Enter your email address" 
+                                                           required
+                                                           aria-label="Email address">
+                                                    <button type="submit" class="theme-btn btn-style-one">
+                                                        <span class="txt">Subscribe</span>
+                                                    </button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <!-- End Widgets Section -->
+                
+                <!-- Copyright Section -->
+                <div class="copyright" style="text-align: center; padding-top: 40px; margin-top: 20px; border-top: 1px solid rgba(255,255,255,0.1);">
+                    <p style="color: #888; font-size: 14px;">
+                        &copy; 2024 Dynamic Fashion World. All Rights Reserved. 
+                        Designed with <i class="fas fa-heart" style="color: #FF3366;"></i> for fashion lovers
+                    </p>
+                </div>
+                
+            </div>
+        </footer>
+        <!-- End Main Footer -->
+        
+    </div>  
+    <!-- End Page Wrapper -->
 
+    <!-- Scroll to Top Button -->
+    <div class="scroll-to-top scroll-to-target" data-target="html">
+        <span class="fa fa-angle-up"></span>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/jquery.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.fancybox.js"></script>
+    <script src="js/isotope.js"></script>
+    <script src="js/owl.js"></script>
+    <script src="js/wow.js"></script>
+    <script src="js/appear.js"></script>
+    <script src="js/scrollbar.js"></script>
+    <script src="js/script.js"></script>
+    
+    <!-- Custom Script -->
+    <script>
+        // Scroll to Top Functionality
+        $(document).ready(function() {
+            $(window).scroll(function() {
+                if ($(this).scrollTop() > 100) {
+                    $('.scroll-to-top').addClass('show');
+                } else {
+                    $('.scroll-to-top').removeClass('show');
+                }
+            });
+            
+            $('.scroll-to-top').click(function() {
+                $('html, body').animate({scrollTop: 0}, 800);
+                return false;
+            });
+            
+            // Newsletter Form Submission
+            $('#newsletterForm').on('submit', function(e) {
+                e.preventDefault();
+                var email = $(this).find('input[type="email"]').val();
+                if(email) {
+                    alert('Thank you for subscribing! You will receive our latest offers.');
+                    $(this).find('input[type="email"]').val('');
+                }
+            });
+        });
+    </script>
+    
 </body>
 </html>
