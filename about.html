@@ -2,7 +2,14 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Dynamic Fashion World | About Us - Our Story & Passion</title>
+<title>Dynamic Fashion World | About Us - Our Story & Passion for Premium Clothing</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 <!-- Stylesheets -->
 <link href="css/bootstrap.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet">
@@ -15,8 +22,738 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 <meta name="description" content="Dynamic Fashion World - We make dream clothings a reality since 2013. Discover our story, mission, and passion for trendy, classy, and kiddy fashion.">
-<!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
-<!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
+
+<style>
+    /* =============================================
+       COMPLETE CUSTOM STYLES - ABOUT PAGE
+    ============================================= */
+    
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-family: 'Poppins', sans-serif;
+        overflow-x: hidden;
+        color: #333;
+    }
+    
+    /* Header Styles */
+    .main-header {
+        background: #ffffff;
+        box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+    }
+    
+    .logo-outer a {
+        font-family: 'Playfair Display', serif;
+        font-size: 28px;
+        font-weight: 700;
+        background: linear-gradient(135deg, #FF3366, #FFD700);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        text-decoration: none;
+        letter-spacing: 2px;
+    }
+    
+    /* Header Top */
+    .header-top {
+        background: #f5f5f5;
+        padding: 10px 0;
+        font-size: 14px;
+    }
+    
+    .auto-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+    
+    .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+    
+    .top-left {
+        float: left;
+    }
+    
+    .top-right {
+        float: right;
+    }
+    
+    .top-left .text {
+        color: #666;
+    }
+    
+    .top-left .text i,
+    .top-left .text .icon {
+        color: #FF3366;
+        margin-right: 8px;
+    }
+    
+    .top-left .text .number {
+        color: #FF3366;
+        font-weight: 600;
+        text-decoration: none;
+    }
+    
+    .info-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        gap: 20px;
+    }
+    
+    .info-list li a {
+        color: #666;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+    
+    .info-list li.current a,
+    .info-list li a:hover {
+        color: #FF3366;
+    }
+    
+    .header-upper {
+        padding: 20px 0;
+    }
+    
+    .nav-outer {
+        float: right;
+    }
+    
+    .navigation {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        gap: 30px;
+    }
+    
+    .navigation li a {
+        color: #333;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s;
+        font-size: 15px;
+    }
+    
+    .navigation li.current a,
+    .navigation li a:hover {
+        color: #FF3366;
+    }
+    
+    /* Page Title Hero */
+    .page-title {
+        position: relative;
+        padding: 100px 0;
+        background-size: cover;
+        background-position: center;
+        text-align: center;
+    }
+    
+    .page-title::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0,0,0,0.6);
+    }
+    
+    .page-title .auto-container {
+        position: relative;
+        z-index: 2;
+    }
+    
+    .page-title h2 {
+        font-size: 48px;
+        color: #ffffff;
+        font-family: 'Playfair Display', serif;
+        margin-bottom: 15px;
+    }
+    
+    .page-breadcrumb {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .page-breadcrumb li {
+        display: inline-block;
+        color: #FFD700;
+        font-size: 14px;
+    }
+    
+    .page-breadcrumb li a {
+        color: #ffffff;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+    
+    .page-breadcrumb li a:hover {
+        color: #FFD700;
+    }
+    
+    .page-breadcrumb li::after {
+        content: '/';
+        margin: 0 10px;
+        color: #ffffff;
+    }
+    
+    .page-breadcrumb li:last-child::after {
+        display: none;
+    }
+    
+    /* Section Title */
+    .sec-title {
+        margin-bottom: 30px;
+    }
+    
+    .sec-title h2 {
+        font-size: 36px;
+        font-family: 'Playfair Display', serif;
+        color: #1a1a1a;
+        margin-bottom: 15px;
+        position: relative;
+        display: inline-block;
+        padding-bottom: 15px;
+    }
+    
+    .sec-title h2:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 60px;
+        height: 3px;
+        background: linear-gradient(90deg, #FF3366, #FFD700);
+    }
+    
+    .sec-title .text {
+        color: #666;
+        font-size: 16px;
+    }
+    
+    .sec-title.centered {
+        text-align: center;
+    }
+    
+    .sec-title.centered h2:after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    /* Row & Columns */
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -15px;
+    }
+    
+    .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8,
+    .col-md-6, .col-md-12, .col-sm-12 {
+        position: relative;
+        width: 100%;
+        padding: 0 15px;
+    }
+    
+    @media (min-width: 992px) {
+        .col-lg-3 { flex: 0 0 25%; max-width: 25%; }
+        .col-lg-4 { flex: 0 0 33.333%; max-width: 33.333%; }
+        .col-lg-5 { flex: 0 0 41.666%; max-width: 41.666%; }
+        .col-lg-6 { flex: 0 0 50%; max-width: 50%; }
+        .col-lg-7 { flex: 0 0 58.333%; max-width: 58.333%; }
+        .col-lg-8 { flex: 0 0 66.666%; max-width: 66.666%; }
+    }
+    
+    @media (min-width: 768px) {
+        .col-md-6 { flex: 0 0 50%; max-width: 50%; }
+        .col-md-12 { flex: 0 0 100%; max-width: 100%; }
+    }
+    
+    /* About Section */
+    .about-section-one {
+        padding: 80px 0 60px;
+    }
+    
+    .bold-text {
+        font-size: 20px;
+        font-weight: 600;
+        color: #FF3366;
+        margin: 20px 0 15px;
+        line-height: 1.4;
+    }
+    
+    .image img {
+        width: 100%;
+        border-radius: 10px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+    
+    /* Mission & Vision Blocks */
+    .mission-section {
+        background: #f8f5f0;
+        padding: 70px 0;
+    }
+    
+    .mission-block, .vision-block {
+        background: white;
+        padding: 40px 30px;
+        border-radius: 10px;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        height: 100%;
+        transition: transform 0.3s;
+    }
+    
+    .mission-block:hover, .vision-block:hover {
+        transform: translateY(-5px);
+    }
+    
+    .mission-block .icon, .vision-block .icon {
+        font-size: 50px;
+        margin-bottom: 20px;
+    }
+    
+    .mission-block h3, .vision-block h3 {
+        font-size: 24px;
+        margin-bottom: 15px;
+        font-family: 'Playfair Display', serif;
+    }
+    
+    /* Values Section */
+    .values-section {
+        padding: 80px 0;
+    }
+    
+    .value-block .inner {
+        text-align: center;
+        padding: 35px 20px;
+        background: #fff;
+        border-radius: 12px;
+        transition: all 0.3s;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        height: 100%;
+    }
+    
+    .value-block .inner:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 15px 35px rgba(255,51,102,0.15);
+    }
+    
+    .value-block .icon {
+        font-size: 48px;
+        margin-bottom: 20px;
+    }
+    
+    .value-block h4 {
+        font-size: 20px;
+        margin-bottom: 12px;
+        font-weight: 600;
+    }
+    
+    .value-block p {
+        color: #666;
+        font-size: 14px;
+        line-height: 1.6;
+    }
+    
+    /* Team Section */
+    .team-section {
+        background: #faf8f5;
+        padding: 80px 0;
+    }
+    
+    .team-block .inner-box {
+        background: white;
+        border-radius: 15px;
+        overflow: hidden;
+        text-align: center;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        transition: transform 0.3s;
+    }
+    
+    .team-block .inner-box:hover {
+        transform: translateY(-5px);
+    }
+    
+    .team-block .image img {
+        width: 100%;
+        height: 280px;
+        object-fit: cover;
+    }
+    
+    .team-block .lower-content {
+        padding: 20px;
+    }
+    
+    .team-block h3 {
+        font-size: 18px;
+        margin-bottom: 5px;
+        font-weight: 600;
+    }
+    
+    .team-block .designation {
+        color: #FF3366;
+        margin-bottom: 10px;
+        font-size: 13px;
+    }
+    
+    .team-block p {
+        font-size: 13px;
+        color: #666;
+    }
+    
+    /* Stats Section */
+    .stats-section {
+        background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?w=1600');
+        background-size: cover;
+        background-attachment: fixed;
+        padding: 80px 0;
+        color: white;
+    }
+    
+    .stat-block .count {
+        font-size: 48px;
+        font-weight: 700;
+        color: #FFD700;
+        font-family: 'Playfair Display', serif;
+    }
+    
+    .stat-block .title {
+        font-size: 16px;
+        margin-top: 8px;
+    }
+    
+    /* Why Choose Us */
+    .why-choose-us {
+        padding: 80px 0;
+    }
+    
+    .list-style-one {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .list-style-one li {
+        margin-bottom: 15px;
+        padding-left: 25px;
+        position: relative;
+        font-size: 15px;
+    }
+    
+    .list-style-one li:before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: #FF3366;
+        font-weight: bold;
+    }
+    
+    .theme-btn {
+        background: linear-gradient(135deg, #FF3366, #FF6B35);
+        color: #ffffff;
+        border: none;
+        padding: 14px 35px;
+        border-radius: 40px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-size: 15px;
+        display: inline-block;
+        text-decoration: none;
+    }
+    
+    .theme-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(255,51,102,0.3);
+        color: white;
+    }
+    
+    /* Testimonial Section */
+    .testimonial-section {
+        background: #f8f5f0;
+        padding: 80px 0;
+    }
+    
+    .sec-title-two {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    
+    .sec-title-two h2 {
+        font-size: 36px;
+        font-family: 'Playfair Display', serif;
+        color: #1a1a1a;
+        position: relative;
+        display: inline-block;
+        padding-bottom: 15px;
+    }
+    
+    .sec-title-two h2:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 3px;
+        background: linear-gradient(90deg, #FF3366, #FFD700);
+    }
+    
+    .testimonial-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+    }
+    
+    .testimonial-card {
+        background: white;
+        padding: 30px;
+        border-radius: 15px;
+        text-align: center;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        transition: transform 0.3s;
+    }
+    
+    .testimonial-card:hover {
+        transform: translateY(-5px);
+    }
+    
+    .testimonial-card .client-img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 15px;
+        border: 3px solid #FFD700;
+    }
+    
+    .testimonial-card h3 {
+        font-size: 18px;
+        margin-bottom: 5px;
+        font-weight: 600;
+    }
+    
+    .testimonial-card .title {
+        color: #FF3366;
+        font-size: 13px;
+        margin-bottom: 15px;
+    }
+    
+    .testimonial-card .text {
+        font-style: italic;
+        color: #555;
+        line-height: 1.6;
+    }
+    
+    /* Call to Action */
+    .call-to-action-section {
+        background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('https://images.unsplash.com/photo-1483985988355-763728e1935b?w=1600');
+        background-size: cover;
+        background-position: center;
+        padding: 80px 0;
+        text-align: center;
+    }
+    
+    .call-to-action-section h2 {
+        color: white;
+        font-size: 38px;
+        font-family: 'Playfair Display', serif;
+        margin-bottom: 15px;
+    }
+    
+    .call-to-action-section .text {
+        color: #f0e6d2;
+        font-size: 16px;
+    }
+    
+    /* Footer */
+    .main-footer {
+        background: linear-gradient(135deg, #0a0a0a, #1a1a1a);
+        color: #ffffff;
+        padding: 60px 0 30px;
+    }
+    
+    .footer-widget h2 {
+        color: #ffffff;
+        font-size: 20px;
+        margin-bottom: 25px;
+        position: relative;
+        padding-bottom: 12px;
+    }
+    
+    .footer-widget h2:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 40px;
+        height: 2px;
+        background: linear-gradient(90deg, #FF3366, #FFD700);
+    }
+    
+    .footer-widget .text {
+        color: rgba(255,255,255,0.7);
+        font-size: 14px;
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+    
+    .social-icons {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        gap: 12px;
+    }
+    
+    .social-icons li a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 38px;
+        height: 38px;
+        background: rgba(255,255,255,0.1);
+        border-radius: 50%;
+        color: #ffffff;
+        transition: all 0.3s;
+    }
+    
+    .social-icons li a:hover {
+        background: #FF3366;
+        transform: translateY(-3px);
+    }
+    
+    .list {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .list li {
+        margin-bottom: 12px;
+    }
+    
+    .list li a {
+        color: rgba(255,255,255,0.7);
+        text-decoration: none;
+        transition: all 0.3s;
+    }
+    
+    .list li a:hover {
+        color: #FFD700;
+        padding-left: 5px;
+    }
+    
+    .contact-number {
+        font-size: 24px;
+        color: #FFD700;
+        text-decoration: none;
+        display: block;
+        margin-bottom: 15px;
+    }
+    
+    .newsletter-form .form-group {
+        display: flex;
+        gap: 10px;
+    }
+    
+    .newsletter-form input {
+        flex: 1;
+        padding: 12px;
+        border: 1px solid rgba(255,255,255,0.1);
+        background: rgba(255,255,255,0.05);
+        color: #ffffff;
+        border-radius: 40px;
+    }
+    
+    .newsletter-form .theme-btn {
+        padding: 12px 22px;
+    }
+    
+    /* Scroll to Top */
+    .scroll-to-top {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        width: 45px;
+        height: 45px;
+        background: linear-gradient(135deg, #FF3366, #FF6B35);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s;
+        z-index: 1000;
+    }
+    
+    .scroll-to-top.show {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .scroll-to-top span {
+        color: #ffffff;
+        font-size: 20px;
+    }
+    
+    /* Responsive */
+    @media (max-width: 991px) {
+        .nav-outer {
+            float: none;
+            text-align: center;
+            margin-top: 15px;
+        }
+        .navigation {
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .page-title h2 {
+            font-size: 36px;
+        }
+        .sec-title h2 {
+            font-size: 28px;
+        }
+        .call-to-action-section h2 {
+            font-size: 28px;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .top-left, .top-right {
+            float: none;
+            text-align: center;
+            margin-bottom: 8px;
+        }
+        .info-list {
+            justify-content: center;
+        }
+        .newsletter-form .form-group {
+            flex-direction: column;
+        }
+        .testimonial-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+    
+    .big-column {
+        margin-bottom: 20px;
+    }
+    
+    .footer-column {
+        margin-bottom: 20px;
+    }
+</style>
+
 </head>
 
 <body>
@@ -25,13 +762,12 @@
     <!-- Preloader -->
     <div class="preloader"></div>
 
-    <!-- ===== HEADER: Dynamic Fashion World Style (same as homepage) ===== -->
+    <!-- ===== HEADER ===== -->
     <header class="main-header header-style-one">
-        <!--Header Top-->
         <div class="header-top">
             <div class="auto-container clearfix">
                 <div class="top-left clearfix">
-                    <div class="text"><span class="icon flaticon-call-answer"></span> Need help? Call Us Now : <a href="tel:0703-332-8869" class="number">0703 332 8869</a></div>
+                    <div class="text"><i class="fas fa-phone-alt"></i> Need help? Call Us Now : <a href="tel:0703-332-8869" class="number">0703 332 8869</a></div>
                 </div>
                 <div class="top-right clearfix">
                     <ul class="info-list">
@@ -41,64 +777,30 @@
                 </div>
             </div>
         </div>
-        <!-- End Header Top -->
 
-        <!-- Header Upper -->
         <div class="header-upper">
             <div class="inner-container">
-                <div class="auto-container clearfix" style="text-align: center; align-items: center">
-                    <div class="logo-outer" style="margin-top: 3.5%; margin-bottom: 3.5%">
-                        <a href="index.html" >FASHION WORLD</a>
+                <div class="auto-container clearfix" style="text-align: center;">
+                    <div class="logo-outer" style="margin: 20px 0;">
+                        <a href="index.html">FASHION<span style="color:#FF3366;">WORLD</span></a>
                     </div>
-
-                    <!--Nav Box-->
                     <div class="nav-outer clearfix">
-                        <div class="mobile-nav-toggler"><span class="icon flaticon-menu-1"></span></div>
-                        <nav class="main-menu navbar-expand-md navbar-light">
-                            <div class="navbar-header">      
-                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                                    <span class="icon flaticon-menu-1"></span>
-                                </button>
-                            </div>
-                            
-                            <div class="collapse navbar-collapse clearfix" id="navbarSupportedContent">
-                                <ul class="navigation clearfix">
-                                    <li><a href="index.html">Home</a></li>
-                                    <li class="current dropdown"><a href="about.html">About us</a></li>
-                                    <li class="dropdown"><a href="projects-classic.html">Projects</a></li>
-                                    <li><a href="contact.html">Contact</a></li>
-                                </ul>
-                            </div>
+                        <nav class="main-menu">
+                            <ul class="navigation clearfix">
+                                <li><a href="index.html">Home</a></li>
+                                <li class="current"><a href="about.html">About us</a></li>
+                                <li><a href="projects-classic.html">Projects</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
                         </nav>
                     </div>
                 </div>
             </div>
         </div>
-        <!--End Header Upper-->
-
-        <!-- Mobile Menu -->
-        <div class="mobile-menu">
-            <div class="menu-backdrop"></div>
-            <div class="close-btn"><span class="icon flaticon-cancel"></span></div>
-            <nav class="menu-box">
-                <div class="nav-logo"><a href="index.html"><img src="images/logo.png" alt="" title=""></a></div>
-                <ul class="navigation clearfix"></ul>
-                <div class="social-links">
-                    <ul class="clearfix">
-                        <li><a href="#"><span class="fab fa-twitter"></span></a></li>
-                        <li><a href="#"><span class="fab fa-facebook-square"></span></a></li>
-                        <li><a href="#"><span class="fab fa-pinterest-p"></span></a></li>
-                        <li><a href="#"><span class="fab fa-instagram"></span></a></li>
-                        <li><a href="#"><span class="fab fa-youtube"></span></a></li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
     </header>
-    <!-- ===== END HEADER ===== -->
 
-    <!-- Page Title Section (About Hero) -->
-    <section class="page-title" style="background-image:url(images/background/about-bg.jpg); background-size: cover; background-position: center;">
+    <!-- Page Title Section -->
+    <section class="page-title" style="background-image: url('https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=1600'); background-size: cover; background-position: center;">
         <div class="auto-container">
             <h2>Our Story</h2>
             <ul class="page-breadcrumb">
@@ -108,12 +810,11 @@
         </div>
     </section>
 
-    <!-- About Section One - Who We Are -->
-    <section class="about-section-one" style="padding: 80px 0 60px;">
+    <!-- About Section One -->
+    <section class="about-section-one">
         <div class="auto-container">
             <div class="row clearfix">
-                <!-- Content Column -->
-                <div class="content-column col-lg-6 col-md-12 col-sm-12">
+                <div class="content-column col-lg-6 col-md-12">
                     <div class="inner-column">
                         <div class="sec-title">
                             <h2>We Make Dream <br> Clothings a Reality</h2>
@@ -125,37 +826,33 @@
                             <p>Today, we're proud to serve a community of fashion lovers who trust us to deliver not just clothing, but confidence and joy. Every piece we create is infused with love, attention to detail, and a commitment to excellence.</p>
                         </div>
                         <div class="signature" style="margin-top: 25px;">
-                            <img src="images/resource/signature.png" alt="Signature" style="max-width: 150px;">
-                            <p style="margin-top: 10px; font-style: italic;">- Chira Flourish, Founder</p>
+                            <p style="font-style: italic; font-size: 18px; color: #FF3366;">- Chira Flourish, Founder</p>
                         </div>
                     </div>
                 </div>
-                <!-- Image Column -->
-                <div class="image-column col-lg-6 col-md-12 col-sm-12">
-                    <div class="inner-column">
-                        <div class="image">
-                            <img src="images/resource/about-founder.jpg" alt="Founder at Dynamic Fashion World" style="width: 100%; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
-                        </div>
+                <div class="image-column col-lg-6 col-md-12">
+                    <div class="image">
+                        <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=800" alt="Founder at Dynamic Fashion World">
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Our Mission & Vision Section -->
-    <section class="mission-section" style="background: #f8f5f0; padding: 70px 0;">
+    <!-- Mission & Vision Section -->
+    <section class="mission-section">
         <div class="auto-container">
             <div class="row clearfix">
-                <div class="col-lg-6 col-md-12 col-sm-12">
-                    <div class="mission-block" style="background: white; padding: 40px 30px; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); margin-bottom: 30px;">
-                        <div class="icon" style="font-size: 50px; color: #c6a43b; margin-bottom: 20px;">🎯</div>
+                <div class="col-lg-6 col-md-12">
+                    <div class="mission-block">
+                        <div class="icon">🎯</div>
                         <h3>Our Mission</h3>
                         <p>To inspire fragments of your life stories with the finest, classy, and bossy clothings — offering trendy adult wear, adorable kids' collections, and premium accessories that celebrate individuality and confidence.</p>
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-12 col-sm-12">
-                    <div class="vision-block" style="background: white; padding: 40px 30px; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); margin-bottom: 30px;">
-                        <div class="icon" style="font-size: 50px; color: #c6a43b; margin-bottom: 20px;">👁️</div>
+                <div class="col-lg-6 col-md-12">
+                    <div class="vision-block">
+                        <div class="icon">👁️</div>
                         <h3>Our Vision</h3>
                         <p>To become Africa's most trusted fashion brand, known for blending cultural richness with global trends — making quality fashion accessible to every family, from the youngest to the most elegant.</p>
                     </div>
@@ -165,37 +862,37 @@
     </section>
 
     <!-- Core Values Section -->
-    <section class="values-section" style="padding: 80px 0;">
+    <section class="values-section">
         <div class="auto-container">
             <div class="sec-title centered">
                 <h2>What Drives Us</h2>
                 <div class="text">Our core values shape every stitch, every design, and every smile we create.</div>
             </div>
             <div class="row clearfix">
-                <div class="value-block col-lg-3 col-md-6 col-sm-12" style="margin-bottom: 30px;">
-                    <div class="inner" style="text-align: center; padding: 30px 20px; background: #fff; border-radius: 8px; transition: all 0.3s; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
-                        <div class="icon" style="font-size: 48px; margin-bottom: 20px;">✨</div>
+                <div class="value-block col-lg-3 col-md-6 col-sm-12">
+                    <div class="inner">
+                        <div class="icon">✨</div>
                         <h4>Quality First</h4>
                         <p>We source premium fabrics and ensure every piece meets our high standards before it reaches you.</p>
                     </div>
                 </div>
-                <div class="value-block col-lg-3 col-md-6 col-sm-12" style="margin-bottom: 30px;">
-                    <div class="inner" style="text-align: center; padding: 30px 20px; background: #fff; border-radius: 8px; transition: all 0.3s; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
-                        <div class="icon" style="font-size: 48px; margin-bottom: 20px;">🎨</div>
+                <div class="value-block col-lg-3 col-md-6 col-sm-12">
+                    <div class="inner">
+                        <div class="icon">🎨</div>
                         <h4>Creative Expression</h4>
                         <p>We celebrate uniqueness through bold designs, vibrant colors, and personalized touches.</p>
                     </div>
                 </div>
-                <div class="value-block col-lg-3 col-md-6 col-sm-12" style="margin-bottom: 30px;">
-                    <div class="inner" style="text-align: center; padding: 30px 20px; background: #fff; border-radius: 8px; transition: all 0.3s; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
-                        <div class="icon" style="font-size: 48px; margin-bottom: 20px;">🤝</div>
+                <div class="value-block col-lg-3 col-md-6 col-sm-12">
+                    <div class="inner">
+                        <div class="icon">🤝</div>
                         <h4>Customer Love</h4>
                         <p>Your happiness is our priority. We listen, we care, and we go the extra mile for you.</p>
                     </div>
                 </div>
-                <div class="value-block col-lg-3 col-md-6 col-sm-12" style="margin-bottom: 30px;">
-                    <div class="inner" style="text-align: center; padding: 30px 20px; background: #fff; border-radius: 8px; transition: all 0.3s; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
-                        <div class="icon" style="font-size: 48px; margin-bottom: 20px;">🌍</div>
+                <div class="value-block col-lg-3 col-md-6 col-sm-12">
+                    <div class="inner">
+                        <div class="icon">🌍</div>
                         <h4>Community Impact</h4>
                         <p>We empower local artisans and give back to the community that supports us.</p>
                     </div>
@@ -204,58 +901,50 @@
         </div>
     </section>
 
-    <!-- Team Section (Meet Our Designers) -->
-    <section class="team-section" style="background: #faf8f5; padding: 80px 0;">
+    <!-- Team Section -->
+    <section class="team-section">
         <div class="auto-container">
             <div class="sec-title centered">
                 <h2>The Creative Minds</h2>
                 <div class="text">Meet the passionate team behind Dynamic Fashion World.</div>
             </div>
             <div class="row clearfix">
-                <div class="team-block col-lg-3 col-md-6 col-sm-12" style="margin-bottom: 30px;">
-                    <div class="inner-box" style="background: white; border-radius: 10px; overflow: hidden; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.08);">
-                        <div class="image">
-                            <img src="images/resource/team-1.jpg" alt="Chira Flourish" style="width: 100%; height: 280px; object-fit: cover;">
-                        </div>
-                        <div class="lower-content" style="padding: 20px;">
+                <div class="team-block col-lg-3 col-md-6 col-sm-12">
+                    <div class="inner-box">
+                        <div class="image"><img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400" alt="Chira Flourish"></div>
+                        <div class="lower-content">
                             <h3>Chira Flourish</h3>
-                            <div class="designation" style="color: #c6a43b; margin-bottom: 10px;">Founder & Creative Director</div>
+                            <div class="designation">Founder & Creative Director</div>
                             <p>Visionary behind our unique aesthetic.</p>
                         </div>
                     </div>
                 </div>
-                <div class="team-block col-lg-3 col-md-6 col-sm-12" style="margin-bottom: 30px;">
-                    <div class="inner-box" style="background: white; border-radius: 10px; overflow: hidden; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.08);">
-                        <div class="image">
-                            <img src="images/resource/team-2.jpg" alt="Sommy Mitchell" style="width: 100%; height: 280px; object-fit: cover;">
-                        </div>
-                        <div class="lower-content" style="padding: 20px;">
+                <div class="team-block col-lg-3 col-md-6 col-sm-12">
+                    <div class="inner-box">
+                        <div class="image"><img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=400" alt="Sommy Mitchell"></div>
+                        <div class="lower-content">
                             <h3>Sommy Mitchell</h3>
-                            <div class="designation" style="color: #c6a43b; margin-bottom: 10px;">Head Designer</div>
+                            <div class="designation">Head Designer</div>
                             <p>Bringing bossy and trendy concepts to life.</p>
                         </div>
                     </div>
                 </div>
-                <div class="team-block col-lg-3 col-md-6 col-sm-12" style="margin-bottom: 30px;">
-                    <div class="inner-box" style="background: white; border-radius: 10px; overflow: hidden; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.08);">
-                        <div class="image">
-                            <img src="images/resource/team-3.jpg" alt="Angel Zinny" style="width: 100%; height: 280px; object-fit: cover;">
-                        </div>
-                        <div class="lower-content" style="padding: 20px;">
+                <div class="team-block col-lg-3 col-md-6 col-sm-12">
+                    <div class="inner-box">
+                        <div class="image"><img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400" alt="Angel Zinny"></div>
+                        <div class="lower-content">
                             <h3>Angel Zinny</h3>
-                            <div class="designation" style="color: #c6a43b; margin-bottom: 10px;">Kiddie Collection Specialist</div>
+                            <div class="designation">Kiddie Collection Specialist</div>
                             <p>Making cuteness and kinkiness for little ones.</p>
                         </div>
                     </div>
                 </div>
-                <div class="team-block col-lg-3 col-md-6 col-sm-12" style="margin-bottom: 30px;">
-                    <div class="inner-box" style="background: white; border-radius: 10px; overflow: hidden; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.08);">
-                        <div class="image">
-                            <img src="images/resource/team-4.jpg" alt="Michael Noddy" style="width: 100%; height: 280px; object-fit: cover;">
-                        </div>
-                        <div class="lower-content" style="padding: 20px;">
+                <div class="team-block col-lg-3 col-md-6 col-sm-12">
+                    <div class="inner-box">
+                        <div class="image"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400" alt="Michael Noddy"></div>
+                        <div class="lower-content">
                             <h3>Michael Noddy</h3>
-                            <div class="designation" style="color: #c6a43b; margin-bottom: 10px;">Client Relations</div>
+                            <div class="designation">Client Relations</div>
                             <p>Ensuring every customer feels valued.</p>
                         </div>
                     </div>
@@ -264,44 +953,28 @@
         </div>
     </section>
 
-    <!-- Milestones / Stats Section -->
-    <section class="stats-section" style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/background/stats-bg.jpg'); background-size: cover; background-attachment: fixed; padding: 80px 0; color: white;">
+    <!-- Stats Section -->
+    <section class="stats-section">
         <div class="auto-container">
             <div class="row clearfix">
-                <div class="stat-block col-lg-3 col-md-6 col-sm-12" style="text-align: center; margin-bottom: 30px;">
-                    <div class="count" style="font-size: 48px; font-weight: 700; color: #c6a43b;">2013</div>
-                    <div class="title" style="font-size: 18px;">Year Established</div>
-                </div>
-                <div class="stat-block col-lg-3 col-md-6 col-sm-12" style="text-align: center; margin-bottom: 30px;">
-                    <div class="count" style="font-size: 48px; font-weight: 700; color: #c6a43b;">5000+</div>
-                    <div class="title" style="font-size: 18px;">Happy Customers</div>
-                </div>
-                <div class="stat-block col-lg-3 col-md-6 col-sm-12" style="text-align: center; margin-bottom: 30px;">
-                    <div class="count" style="font-size: 48px; font-weight: 700; color: #c6a43b;">1000+</div>
-                    <div class="title" style="font-size: 18px;">Unique Designs</div>
-                </div>
-                <div class="stat-block col-lg-3 col-md-6 col-sm-12" style="text-align: center; margin-bottom: 30px;">
-                    <div class="count" style="font-size: 48px; font-weight: 700; color: #c6a43b;">15+</div>
-                    <div class="title" style="font-size: 18px;">Expert Team Members</div>
-                </div>
+                <div class="stat-block col-lg-3 col-md-6 col-sm-12"><div class="count">2013</div><div class="title">Year Established</div></div>
+                <div class="stat-block col-lg-3 col-md-6 col-sm-12"><div class="count">5000+</div><div class="title">Happy Customers</div></div>
+                <div class="stat-block col-lg-3 col-md-6 col-sm-12"><div class="count">1000+</div><div class="title">Unique Designs</div></div>
+                <div class="stat-block col-lg-3 col-md-6 col-sm-12"><div class="count">15+</div><div class="title">Expert Team Members</div></div>
             </div>
         </div>
     </section>
 
-    <!-- Why Choose Us Section -->
-    <section class="why-choose-us" style="padding: 80px 0;">
+    <!-- Why Choose Us -->
+    <section class="why-choose-us">
         <div class="auto-container">
             <div class="row clearfix">
-                <div class="image-column col-lg-6 col-md-12 col-sm-12">
-                    <div class="image">
-                        <img src="images/resource/why-choose-us.jpg" alt="Why choose Dynamic Fashion World" style="width: 100%; border-radius: 10px;">
-                    </div>
+                <div class="image-column col-lg-6 col-md-12">
+                    <div class="image"><img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=800" alt="Why choose Dynamic Fashion World"></div>
                 </div>
-                <div class="content-column col-lg-6 col-md-12 col-sm-12">
-                    <div class="sec-title">
-                        <h2>Why Fashion Lovers <br> Choose Us</h2>
-                    </div>
-                    <ul class="list-style-one" style="margin-top: 20px;">
+                <div class="content-column col-lg-6 col-md-12">
+                    <div class="sec-title"><h2>Why Fashion Lovers <br> Choose Us</h2></div>
+                    <ul class="list-style-one">
                         <li><strong>✨ Premium Quality:</strong> Only the finest fabrics and craftsmanship.</li>
                         <li><strong>👗 Trendy & Unique:</strong> Stay ahead with our exclusive designs.</li>
                         <li><strong>👶 Kiddie Paradise:</strong> Adorable, comfy, and stylish kids' wear.</li>
@@ -309,184 +982,83 @@
                         <li><strong>🚚 Nationwide Delivery:</strong> We bring fashion to your doorstep.</li>
                         <li><strong>💬 Personalized Support:</strong> We're here to help you shine.</li>
                     </ul>
-                    <a href="contact.html" class="theme-btn btn-style-one" style="margin-top: 30px;"><span class="txt">Talk to a Designer</span></a>
+                    <a href="contact.html" class="theme-btn">Talk to a Designer</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Testimonial Snippet (from homepage style) -->
-    <section class="testimonial-section" style="background: #f8f5f0; padding: 80px 0;">
+    <!-- Testimonial Section -->
+    <section class="testimonial-section">
         <div class="auto-container">
-            <div class="sec-title-two centered">
-                <h2>What Our Customers Say</h2>
-
-                 <h3>Mitchell Sommy</h3>
-                 <div class="title">Loved by Fashion lovers all over the world</div>
-                            <div class="text">Their clothings and designs are exceptional beautiful and unique."</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-block">
-                    <div class="inner-box">
-                        <div class="content">
-                            <div class="image-outer">
-                                <div class="image"><img src="images/resource/mitchelle sommy.jpg" alt=""></div>
-                            </div>
-                            </div>
-                            <h3>Chira Flourish</h3>
-                            <div class="title">Topnotch clothings with a touch of classiness</div>
-                            <div class="text">"Dynamic Fashion World transformed my wardrobe! Their bossy lady collection is everything. I've never felt more confident."</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-block">
-                    <div class="inner-box">
-                        <div class="content">
-                            <div class="image-outer">
-                                <div class="image"><img src="images/resource/chira flourish (2).jpg" alt=""></div>
-                            </div>
-                            <h3>Michael Noddy</h3>
-                            <div class="title">Simple elegant clothings</div>
-                            <div class="text">"I got the perfect outfit for my sister's wedding. The quality and fit were exceptional. Highly recommend!"</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-block">
-                    <div class="inner-box">
-                        <div class="content">
-                            <div class="image-outer">
-                                <div class="image"><img src="images/resource/micheal noddy.jpg" alt=""></div>
-                            </div>
-                          <h3>Angel Zinny</h3>
-                            <div class="title">Simple elegant clothings</div>
-                            <div class="text">"my kids looked adorable in their kiddies collections, fabrics are soft and the designs unique."</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-block">
-                    <div class="inner-box">
-                        <div class="content">
-                            <div class="image-outer">
-                                <div class="image"><img src="images/resource/Angel zinny (1).jpg" alt=""></div>
-                            </div>
-    </section>
-
-    <!-- Call To Action (Fashion Quote) -->
-    <section class="call-to-action-section" style="background-image: url(images/background/baby\ \(2\).jpg); padding: 70px 0; text-align: center;">
-        <div class="auto-container">
-            <h2 style="color: white;">Think Fashion. Think Dynamic Fashion World.</h2>
-            <div class="text" style="color: #f0e6d2;">Clothings for all styles and budgets. Choose from thousands of designs.<br> Heart your favorites to shortlist.</div>
-            <a href="contact.html" class="theme-btn btn-style-one" style="margin-top: 25px; display: inline-block;"><span class="txt">Shop Your Look</span></a>
+            <div class="sec-title-two"><h2>What Our Customers Say</h2></div>
+            <div class="testimonial-grid">
+                <div class="testimonial-card"><img src="https://randomuser.me/api/portraits/women/68.jpg" alt="client" class="client-img"><h3>Mitchell Sommy</h3><div class="title">Fashion Enthusiast</div><div class="text">"Their clothings and designs are exceptionally beautiful and unique. I'm a loyal customer!"</div></div>
+                <div class="testimonial-card"><img src="https://randomuser.me/api/portraits/women/45.jpg" alt="client" class="client-img"><h3>Chira Flourish</h3><div class="title">Style Icon</div><div class="text">"Dynamic Fashion World transformed my wardrobe! Their bossy lady collection is everything. I've never felt more confident."</div></div>
+                <div class="testimonial-card"><img src="https://randomuser.me/api/portraits/men/32.jpg" alt="client" class="client-img"><h3>Michael Noddy</h3><div class="title">Happy Client</div><div class="text">"I got the perfect outfit for my sister's wedding. The quality and fit were exceptional. Highly recommend!"</div></div>
+                <div class="testimonial-card"><img src="https://randomuser.me/api/portraits/women/52.jpg" alt="client" class="client-img"><h3>Angel Zinny</h3><div class="title">Mom & Fashionista</div><div class="text">"My kids looked adorable in their kiddies collections, fabrics are soft and the designs unique."</div></div>
+            </div>
         </div>
     </section>
 
-   	<!--Main Footer-->
+    <!-- Call To Action -->
+    <section class="call-to-action-section">
+        <div class="auto-container">
+            <h2>Think Fashion. Think Dynamic Fashion World.</h2>
+            <div class="text">Clothings for all styles and budgets. Choose from thousands of designs.<br> Heart your favorites to shortlist.</div>
+            <a href="contact.html" class="theme-btn" style="margin-top: 25px;">Shop Your Look</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer class="main-footer">
-		<div class="auto-container">
-        	<!--Widgets Section-->
+        <div class="auto-container">
             <div class="widgets-section">
-            	<div class="row clearfix">
-                	
-                    <!--big column-->
-                    <div class="big-column col-lg-6 col-md-12 col-sm-12">
-                        <div class="row clearfix">
-                        
-                            <!--Footer Column-->
-                            <div class="footer-column col-lg-7 col-md-6 col-sm-12">
-                                <div class="footer-widget logo-widget">
-									<div class="logo">
-                                    	<a href="index-2.html"><img src="images/footer-logo.png" alt="" /></a>
-                                    </div>
-                                    <div class="text">We inspired fragments of your life stories with the finest, classy, bossy clothings and cuty, kinky kids collections and accessories since 2013.</div>
-                                    <ul class="social-icons">
-                                        <li><a href="#"><span class="fab fa-facebook-f"></span></a></li>
-                                        <li><a href="#"><span class="fab fa-linkedin-in"></span></a></li>
-                                        <li><a href="#"><span class="fab fa-twitter"></span></a></li>
-                                        <li><a href="#"><span class="fab fa-google-plus-g"></span></a></li>
-                                    </ul>
-								</div>
-							</div>
-							
-							<!--Footer Column-->
-                            <div class="footer-column col-lg-5 col-md-6 col-sm-12">
-                                <div class="footer-widget links-widget">
-                                	<h2>Quick links</h2>
-									<div class="widget-content">
-										<ul class="list">
-                                        	<li><a href="#">About Gaille</a></li>
-                                            <li><a href="#">Privacy Policy</a></li>
-                                            <li><a href="#">Terms & Conditionis</a></li>
-                                            <li><a href="#">Faq</a></li>
-                                        </ul>
-                                    </div>
-								</div>
-							</div>
-						
-						</div>
-					</div>
-					
-					<!--big column-->
-                    <div class="big-column col-lg-6 col-md-12 col-sm-12">
-                        <div class="row clearfix">
-                        
-                            <!--Footer Column-->
-                            <div class="footer-column col-lg-5 col-md-6 col-sm-12">
-                                <div class="footer-widget contact-widget">
-									<h2>Contact Info</h2>
-									<div class="widget-content">
-										<a href="tel:+2347033328869" class="contact-number">07033328869</a>
-										<ul>
-											<li>Awka, Anambra state</li>
-											<li>Email :<a href="mailto:fashionworld@gmail.com"> fashionworld@gmail.com</a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							
-							<!--Footer Column-->
-                            <div class="footer-column col-lg-7 col-md-6 col-sm-12">
-                                <div class="footer-widget newsletter-widget">
-                                	<h2>Newsletter</h2>
-									<div class="text">Get Special offers & Discounts</div>
-									<!-- Newsletter Form -->
-									<div class="newsletter-form">
-										<form method="post" action="templateshub.net">
-											<div class="form-group">
-												<input type="email" name="email" value="" placeholder="Enter your email address" required>
-												<button type="submit" class="theme-btn btn-style-one"><span class="txt">Subscribe</span></button>
-											</div>
-										</form>
-									</div>
-								</div>
-							</div>
-						
-						</div>
-					</div>
-					
-				</div>
+                <div class="row clearfix">
+                    <div class="big-column col-lg-6 col-md-12">
+                        <div class="row">
+                            <div class="footer-column col-lg-7 col-md-6"><div class="footer-widget"><h2>FASHION WORLD</h2><div class="text">We inspired fragments of your life stories with the finest, classy, bossy clothings and cuty, kinky kids collections and accessories since 2013.</div><ul class="social-icons"><li><a href="#"><i class="fab fa-facebook-f"></i></a></li><li><a href="#"><i class="fab fa-instagram"></i></a></li><li><a href="#"><i class="fab fa-twitter"></i></a></li></ul></div></div>
+                            <div class="footer-column col-lg-5 col-md-6"><div class="footer-widget"><h2>Quick links</h2><ul class="list"><li><a href="#">About Us</a></li><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms & Conditions</a></li><li><a href="#">FAQs</a></li></ul></div></div>
+                        </div>
+                    </div>
+                    <div class="big-column col-lg-6 col-md-12">
+                        <div class="row">
+                            <div class="footer-column col-lg-5 col-md-6"><div class="footer-widget"><h2>Contact Info</h2><a href="tel:+2347033328869" class="contact-number">0703 332 8869</a><ul><li>Awka, Anambra state</li><li>Email: <a href="mailto:fashionworld@gmail.com">fashionworld@gmail.com</a></li></ul></div></div>
+                            <div class="footer-column col-lg-7 col-md-6"><div class="footer-widget"><h2>Newsletter</h2><div class="text">Get Special offers & Discounts</div><div class="newsletter-form"><form><div class="form-group"><input type="email" placeholder="Enter your email address" required><button type="submit" class="theme-btn">Subscribe</button></div></form></div></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
 
-			
-			
-		</div>
-	</footer>
-	
-</div>  
+<!-- Scroll to Top -->
+<div class="scroll-to-top scroll-to-target"><span class="fa fa-angle-up"></span></div>
 
-<!--Scroll to top-->
-<div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-angle-up"></span></div>
+<script>
+    // Scroll to Top Functionality
+    const scrollBtn = document.querySelector('.scroll-to-top');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 200) {
+            scrollBtn.classList.add('show');
+        } else {
+            scrollBtn.classList.remove('show');
+        }
+    });
+    scrollBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+    
+    // Newsletter Form Submission
+    document.querySelectorAll('.newsletter-form form').forEach(form => {
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you for subscribing to our newsletter!');
+            form.querySelector('input[type="email"]').value = '';
+        });
+    });
+</script>
 
-<!-- Scripts -->
-<script src="js/jquery.js"></script>
-<script src="js/popper.min.js"></script>
-<script src="js/jquery-ui.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery.fancybox.js"></script>
-<script src="js/isotope.js"></script>
-<script src="js/owl.js"></script>
-<script src="js/wow.js"></script>
-<script src="js/appear.js"></script>
-<script src="js/scrollbar.js"></script>
-<script src="js/script.js"></script>
 </body>
 </html>
