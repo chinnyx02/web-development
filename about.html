@@ -10,14 +10,6 @@
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-<!-- Stylesheets -->
-<link href="css/bootstrap.css" rel="stylesheet">
-<link href="css/style.css" rel="stylesheet">
-<link href="css/responsive.css" rel="stylesheet">
-
-<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
-<link rel="icon" href="images/favicon.png" type="image/x-icon">
-
 <!-- Responsive -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
@@ -44,6 +36,9 @@
     .main-header {
         background: #ffffff;
         box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+        position: sticky;
+        top: 0;
+        z-index: 100;
     }
     
     .logo-outer a {
@@ -420,6 +415,10 @@
         color: white;
     }
     
+    .stat-block {
+        text-align: center;
+    }
+    
     .stat-block .count {
         font-size: 48px;
         font-weight: 700;
@@ -759,9 +758,6 @@
 <body>
 
 <div class="page-wrapper">
-    <!-- Preloader -->
-    <div class="preloader"></div>
-
     <!-- ===== HEADER ===== -->
     <header class="main-header header-style-one">
         <div class="header-top">
@@ -771,8 +767,8 @@
                 </div>
                 <div class="top-right clearfix">
                     <ul class="info-list">
-                        <li class="current"><a href="about.html">Our Story</a></li>
-                        <li><a href="blog.html">Inspiration</a></li>
+                        <li class="current"><a href="#">Our Story</a></li>
+                        <li><a href="#">Inspiration</a></li>
                     </ul>
                 </div>
             </div>
@@ -782,15 +778,15 @@
             <div class="inner-container">
                 <div class="auto-container clearfix" style="text-align: center;">
                     <div class="logo-outer" style="margin: 20px 0;">
-                        <a href="index.html">FASHION<span style="color:#FF3366;">WORLD</span></a>
+                        <a href="#">FASHION<span style="color:#FF3366;">WORLD</span></a>
                     </div>
                     <div class="nav-outer clearfix">
                         <nav class="main-menu">
                             <ul class="navigation clearfix">
-                                <li><a href="index.html">Home</a></li>
-                                <li class="current"><a href="about.html">About us</a></li>
-                                <li><a href="projects-classic.html">Projects</a></li>
-                                <li><a href="contact.html">Contact</a></li>
+                                <li><a href="#">Home</a></li>
+                                <li class="current"><a href="#">About us</a></li>
+                                <li><a href="#">Projects</a></li>
+                                <li><a href="#">Contact</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -800,11 +796,11 @@
     </header>
 
     <!-- Page Title Section -->
-    <section class="page-title" style="background-image: url('https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=1600'); background-size: cover; background-position: center;">
+    <section class="page-title" style="background-image: url('https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=1600');">
         <div class="auto-container">
             <h2>Our Story</h2>
             <ul class="page-breadcrumb">
-                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Home</a></li>
                 <li>About Us</li>
             </ul>
         </div>
@@ -982,7 +978,7 @@
                         <li><strong>🚚 Nationwide Delivery:</strong> We bring fashion to your doorstep.</li>
                         <li><strong>💬 Personalized Support:</strong> We're here to help you shine.</li>
                     </ul>
-                    <a href="contact.html" class="theme-btn">Talk to a Designer</a>
+                    <a href="#" class="theme-btn">Talk to a Designer</a>
                 </div>
             </div>
         </div>
@@ -1006,7 +1002,7 @@
         <div class="auto-container">
             <h2>Think Fashion. Think Dynamic Fashion World.</h2>
             <div class="text">Clothings for all styles and budgets. Choose from thousands of designs.<br> Heart your favorites to shortlist.</div>
-            <a href="contact.html" class="theme-btn" style="margin-top: 25px;">Shop Your Look</a>
+            <a href="#" class="theme-btn" style="margin-top: 25px;">Shop Your Look</a>
         </div>
     </section>
 
